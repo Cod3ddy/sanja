@@ -6,90 +6,120 @@ import (
 )
 
 const (
+	// MinimumLocalDigitsLength is the minimum number of subscriber digits accepted.
 	MinimumLocalDigitsLength int = 7
+	// MaximumLocalDigitsLength is the E.164 maximum subscriber digits (15 total minus a 1-digit country code minimum).
 	MaximumLocalDigitsLength int = 12
+	// e164MaxDigits is the E.164 hard cap: country code + subscriber <= 15 digits.
+	e164MaxDigits int = 15
 )
 
-// Normalizer hanldes phone numbder normalization
+// Normalizer handles phone number normalization to E.164 format.
 type Normalizer struct {
 	countries      []Country
 	defaultCountry *Country
 	codeMap        map[string]*Country
 }
 
-// NewNormalizer creatres a new phone number normalizer
-func NewNormalizer(defaultCountryA2 string) *Normalizer {
-	var n = Normalizer{
+// NewNormalizer creates a Normalizer with the given ISO 3166-1 alpha-2 code as the default country.
+// Returns an error if the country code is not recognised.
+func NewNormalizer(defaultCountryA2 string) (*Normalizer, error) {
+	n := &Normalizer{
 		countries: getCountries(),
 		codeMap:   make(map[string]*Country),
 	}
 
 	for i := range n.countries {
 		country := &n.countries[i]
-
-		codes := splitDialingCodes(country.DialingCode)
-
-		for _, code := range codes {
+		for _, code := range splitDialingCodes(country.DialingCode) {
 			n.codeMap[code] = country
 		}
 	}
 
-	// set default country
 	n.defaultCountry = n.GetCountryByA2(defaultCountryA2)
-
-	return &n
-}
-
-// Normalize adds the country code prefix to a phone number if missing
-func (n *Normalizer) Normalize(phone string) (string, error) {
 	if n.defaultCountry == nil {
-		return phone, ErrDefaultCountryNotFound
+		return nil, fmt.Errorf("%w: %s", ErrUnknownCountry, defaultCountryA2)
 	}
 
-	phone = cleanPhone(phone)
+	return n, nil
+}
 
-	if phone == "" || len(phone) < MinimumLocalDigitsLength {
+// Normalize returns phone in E.164 format (+countryCodeSubscriber).
+//
+// Resolution order:
+//  1. Numbers already prefixed with "+" are returned as-is (with length validation).
+//  2. Numbers that begin with the default country's dialing code (no "+" or leading zeros)
+//     receive a "+" prefix.
+//  3. Everything else is treated as a local number: leading zeros are stripped and the
+//     default country code is prepended.
+//
+// Returns ErrInvalidPhoneNumber for numbers that are too short,
+// and ErrPhoneNumberTooLong for numbers that exceed the E.164 15-digit cap.
+func (n *Normalizer) Normalize(phone string) (string, error) {
+	cleaned := cleanPhone(phone)
+
+	if strings.HasPrefix(cleaned, "+") {
+		digits := cleaned[1:]
+		if len(digits) < MinimumLocalDigitsLength {
+			return "", ErrInvalidPhoneNumber
+		}
+		if len(digits) > e164MaxDigits {
+			return "", ErrPhoneNumberTooLong
+		}
+		return cleaned, nil
+	}
+
+	if cleaned == "" || len(cleaned) < MinimumLocalDigitsLength {
 		return "", ErrInvalidPhoneNumber
 	}
 
-	if strings.HasPrefix(phone, "+") {
-		return phone, nil
+	if n.hasCountryCode(cleaned) {
+		if len(cleaned) > e164MaxDigits {
+			return "", ErrPhoneNumberTooLong
+		}
+		return "+" + cleaned, nil
 	}
 
-	// Check it already starts with a country code without +
-	if n.hasCountryCode(phone) {
-		return fmt.Sprintf("+%s", phone), nil
+	local := strings.TrimLeft(cleaned, "0")
+	if len(local) < MinimumLocalDigitsLength {
+		return "", ErrInvalidPhoneNumber
 	}
-
-	phone = strings.TrimLeft(phone, "0") // removes leading zeros in local numbers
+	if len(local) > MaximumLocalDigitsLength {
+		return "", ErrPhoneNumberTooLong
+	}
 
 	defaultCode := splitDialingCodes(n.defaultCountry.DialingCode)[0]
+	result := "+" + defaultCode + local
+	if len(result)-1 > e164MaxDigits {
+		return "", ErrPhoneNumberTooLong
+	}
 
-	return fmt.Sprintf("+%s%s", defaultCode, phone), nil
+	return result, nil
 }
 
-// NormalizeBulk normalizes multiple phone numbers
+// NormalizeBulk normalizes a slice of phone numbers, returning a result and error per entry.
 func (n *Normalizer) NormalizeBulk(phones []string) ([]string, []error) {
-	var normalized = make([]string, len(phones))
-	var errors = make([]error, len(phones))
+	normalized := make([]string, len(phones))
+	errs := make([]error, len(phones))
 
 	for i, phone := range phones {
-		normalized[i], errors[i] = n.Normalize(phone)
+		normalized[i], errs[i] = n.Normalize(phone)
 	}
 
-	return normalized, errors
+	return normalized, errs
 }
 
-// hasCountryCode checks if a phone number already starts with a valid country code
+// hasCountryCode reports whether phone (no "+" prefix) begins with the default country's
+// dialing code. the leading "0" is treated as a local dial prefix and returns false immediately,
+// preventing false matches against country codes that share digits with local number prefixes.
 func (n *Normalizer) hasCountryCode(phone string) bool {
-	cleanPhone := strings.TrimLeft(phone, "0")
-	for i := 1; i <= 4 && i <= len(phone); i++ {
-		prefix := cleanPhone[:i]
-
-		if country, exists := n.codeMap[prefix]; exists {
-			return country.A2 == n.defaultCountry.A2
+	if strings.HasPrefix(phone, "0") {
+		return false
+	}
+	for _, code := range splitDialingCodes(n.defaultCountry.DialingCode) {
+		if strings.HasPrefix(phone, code) {
+			return true
 		}
 	}
-
 	return false
 }
