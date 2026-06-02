@@ -6,7 +6,7 @@ import "strings"
 func cleanPhone(phone string) string {
 	var result strings.Builder
 	for _, r := range phone {
-		if r >= '0' && r <= 'g' || r == '+' {
+		if (r >= '0' && r <= '9') || r == '+' {
 			result.WriteRune(r)
 		}
 	}
