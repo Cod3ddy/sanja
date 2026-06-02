@@ -4,109 +4,66 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
+func mustNormalizer(t *testing.T, a2 string) *Normalizer {
+	t.Helper()
+	n, err := NewNormalizer(a2)
+	require.NoError(t, err)
+	return n
+}
+
+func TestNewNormalizer_InvalidCountry(t *testing.T) {
+	_, err := NewNormalizer("XX")
+	assert.ErrorIs(t, err, ErrUnknownCountry)
+}
+
+func TestNewNormalizer_ValidCountry(t *testing.T) {
+	n, err := NewNormalizer("MW")
+	assert.NoError(t, err)
+	assert.NotNil(t, n)
+}
+
 func TestNormalize(t *testing.T) {
-	norm := NewNormalizer("MW")
+	norm := mustNormalizer(t, "MW")
 
 	tests := []struct {
-		name          string
-		input         string
-		expected      string
-		expectError   bool
-		errorContains string
+		name        string
+		input       string
+		expected    string
+		expectError bool
+		errorIs     error
 	}{
-		{
-			name:     "local number with leading zero",
-			input:    "0886392814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "local number without leading zero",
-			input:    "886392814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "already normalized with plus",
-			input:    "+265886392814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "number with country code without plus",
-			input:    "265886392814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "number with multiple leading zeros",
-			input:    "000886392814",
-			expected: "+265886392814",
-		},
+		{name: "local number with leading zero", input: "0886392814", expected: "+265886392814"},
+		{name: "local number without leading zero", input: "886392814", expected: "+265886392814"},
+		{name: "already normalized with plus", input: "+265886392814", expected: "+265886392814"},
+		{name: "number with country code without plus", input: "265886392814", expected: "+265886392814"},
+		{name: "number with multiple leading zeros", input: "000886392814", expected: "+265886392814"},
+		{name: "number with spaces", input: "088 639 2814", expected: "+265886392814"},
+		{name: "number with dashes", input: "088-639-2814", expected: "+265886392814"},
+		{name: "number with parentheses", input: "(088)6392814", expected: "+265886392814"},
+		{name: "number with mixed formatting", input: "+265 (88) 639-2814", expected: "+265886392814"},
 
-		{
-			name:     "number with spaces",
-			input:    "088 639 2814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "number with dashes",
-			input:    "088-639-2814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "number with parentheses",
-			input:    "(088)6392814",
-			expected: "+265886392814",
-		},
-		{
-			name:     "number with mixed formatting",
-			input:    "+265 (88) 639-2814",
-			expected: "+265886392814",
-		},
+		{name: "number with letters stripped", input: "088-639A2814", expected: "+265886392814"},
 
-		{
-			name:     "US number with country code",
-			input:    "+12025550123",
-			expected: "+12025550123",
-		},
-		{
-			name:     "UK number with country code",
-			input:    "+442079460000",
-			expected: "+442079460000",
-		},
-		{
-			name:     "South Africa number",
-			input:    "+27821234567",
-			expected: "+27821234567",
-		},
+		{name: "US number with country code", input: "+12025550123", expected: "+12025550123"},
+		{name: "UK number with country code", input: "+442079460000", expected: "+442079460000"},
+		{name: "South Africa number", input: "+27821234567", expected: "+27821234567"},
 
-		{
-			name:          "empty string",
-			input:         "",
-			expectError:   true,
-			errorContains: "invalid phone number",
-		},
-		{
-			name:          "only special characters",
-			input:         "+-() ",
-			expectError:   true,
-			errorContains: "invalid phone number",
-		},
-		{
-			name:          "too short number",
-			input:         "123",
-			expectError:   true,
-			errorContains: "invalid phone number",
-		},
+		{name: "empty string", input: "", expectError: true, errorIs: ErrInvalidPhoneNumber},
+		{name: "only special characters", input: "+-() ", expectError: true, errorIs: ErrInvalidPhoneNumber},
+		{name: "too short number", input: "123", expectError: true, errorIs: ErrInvalidPhoneNumber},
+		{name: "exceeds E.164 max", input: "08863928149999999", expectError: true, errorIs: ErrPhoneNumberTooLong},
 	}
 
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			result, err := norm.Normalize(tc.input)
-
 			if tc.expectError {
 				assert.Error(t, err)
-				if tc.errorContains != "" {
-					assert.Contains(t, err.Error(), tc.errorContains)
+				if tc.errorIs != nil {
+					assert.ErrorIs(t, err, tc.errorIs)
 				}
 			} else {
 				assert.NoError(t, err)
@@ -117,12 +74,11 @@ func TestNormalize(t *testing.T) {
 }
 
 func TestNormalizeBulk(t *testing.T) {
-	norm := NewNormalizer("MW")
+	norm := mustNormalizer(t, "MW")
 
 	tests := []struct {
 		name           string
 		input          []string
-		expectedCount  int
 		errorCount     int
 		expectedOutput []string
 	}{
@@ -137,8 +93,7 @@ func TestNormalizeBulk(t *testing.T) {
 				"123",
 				"+447911123456",
 			},
-			expectedCount: 7,
-			errorCount:    2,
+			errorCount: 2,
 			expectedOutput: []string{
 				"+265886392814",
 				"+265886392814",
@@ -157,8 +112,7 @@ func TestNormalizeBulk(t *testing.T) {
 				"+265886392814",
 				"265886392814",
 			},
-			expectedCount: 4,
-			errorCount:    0,
+			errorCount: 0,
 			expectedOutput: []string{
 				"+265886392814",
 				"+265886392814",
@@ -167,22 +121,14 @@ func TestNormalizeBulk(t *testing.T) {
 			},
 		},
 		{
-			name: "all invalid numbers",
-			input: []string{
-				"",
-				"abc",
-				"123",
-			},
-			expectedCount: 3,
-			errorCount:    3,
-			expectedOutput: []string{
-				"", "", "",
-			},
+			name:           "all invalid numbers",
+			input:          []string{"", "abc", "123"},
+			errorCount:     3,
+			expectedOutput: []string{"", "", ""},
 		},
 		{
 			name:           "empty slice",
 			input:          []string{},
-			expectedCount:  0,
 			errorCount:     0,
 			expectedOutput: []string{},
 		},
@@ -190,23 +136,22 @@ func TestNormalizeBulk(t *testing.T) {
 
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
-			normalizedNumbers, errors := norm.NormalizeBulk(tc.input)
+			results, errs := norm.NormalizeBulk(tc.input)
 
-			assert.Equal(t, len(tc.input), len(normalizedNumbers))
-			assert.Equal(t, len(tc.input), len(errors))
+			assert.Equal(t, len(tc.input), len(results))
+			assert.Equal(t, len(tc.input), len(errs))
 
-			actualErrorCount := 0
-			for _, err := range errors {
+			actualErrors := 0
+			for _, err := range errs {
 				if err != nil {
-					actualErrorCount++
+					actualErrors++
 				}
 			}
-
-			assert.Equal(t, tc.errorCount, actualErrorCount)
+			assert.Equal(t, tc.errorCount, actualErrors)
 
 			for i, expected := range tc.expectedOutput {
-				if i < len(normalizedNumbers) {
-					assert.Equal(t, expected, normalizedNumbers[i])
+				if i < len(results) {
+					assert.Equal(t, expected, results[i])
 				}
 			}
 		})
@@ -215,40 +160,19 @@ func TestNormalizeBulk(t *testing.T) {
 
 func TestNormalizeWithDifferentDefaultCountries(t *testing.T) {
 	tests := []struct {
-		name           string
 		defaultCountry string
 		input          string
 		expected       string
 	}{
-		{
-			name:           "US default country",
-			defaultCountry: "US",
-			input:          "5550123",
-			expected:       "+15550123",
-		},
-		{
-			name:           "UK default country",
-			defaultCountry: "GB",
-			input:          "2079460000",
-			expected:       "+442079460000",
-		},
-		{
-			name:           "ZA default country",
-			defaultCountry: "ZA",
-			input:          "821234567",
-			expected:       "+27821234567",
-		},
-		{
-			name:           "KE default country",
-			defaultCountry: "KE",
-			input:          "712345678",
-			expected:       "+254712345678",
-		},
+		{defaultCountry: "US", input: "5550123456", expected: "+15550123456"},
+		{defaultCountry: "GB", input: "2079460000", expected: "+442079460000"},
+		{defaultCountry: "ZA", input: "821234567", expected: "+27821234567"},
+		{defaultCountry: "KE", input: "712345678", expected: "+254712345678"},
 	}
 
 	for _, tc := range tests {
-		t.Run(tc.name, func(t *testing.T) {
-			norm := NewNormalizer(tc.defaultCountry)
+		t.Run(tc.defaultCountry, func(t *testing.T) {
+			norm := mustNormalizer(t, tc.defaultCountry)
 			result, err := norm.Normalize(tc.input)
 			assert.NoError(t, err)
 			assert.Equal(t, tc.expected, result)
@@ -256,18 +180,118 @@ func TestNormalizeWithDifferentDefaultCountries(t *testing.T) {
 	}
 }
 
-func TestNormalizer_NoDefaultCountry(t *testing.T) {
+func TestGetCountryByA2(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
 
-	norm := NewNormalizer("INVALID")
+	t.Run("found", func(t *testing.T) {
+		c := norm.GetCountryByA2("US")
+		require.NotNil(t, c)
+		assert.Equal(t, "United States", c.Name)
+		assert.Equal(t, "1", c.DialingCode)
+	})
 
-	_, err := norm.Normalize("0886392814")
-	assert.Error(t, err)
-	assert.Contains(t, err.Error(), "no default country set")
+	t.Run("not found returns nil", func(t *testing.T) {
+		c := norm.GetCountryByA2("XX")
+		assert.Nil(t, c)
+	})
 }
 
-// Benchmark tests
+func TestGetCountryByCode(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	t.Run("found by single code", func(t *testing.T) {
+		c := norm.GetCountryByCode("265")
+		require.NotNil(t, c)
+		assert.Equal(t, "MW", c.A2)
+	})
+
+	t.Run("found by multi-code country", func(t *testing.T) {
+		c := norm.GetCountryByCode("1829")
+		require.NotNil(t, c)
+		assert.Equal(t, "DO", c.A2)
+	})
+
+	t.Run("not found returns nil", func(t *testing.T) {
+		c := norm.GetCountryByCode("9999")
+		assert.Nil(t, c)
+	})
+}
+
+func TestValidatePhoneNumber(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	tests := []struct {
+		name    string
+		phone   string
+		country string
+		wantErr error
+	}{
+		{
+			name:    "valid Malawi number",
+			phone:   "+265886392814",
+			country: "MW",
+		},
+		{
+			name:    "valid US number",
+			phone:   "+12025550123",
+			country: "US",
+		},
+		{
+			name:    "valid UK number",
+			phone:   "+447911123456",
+			country: "GB",
+		},
+		{
+			name:    "wrong country code",
+			phone:   "+27821234567",
+			country: "MW",
+			wantErr: ErrPhoneNumberAndCountryCodeMismatch,
+		},
+		{
+			name:    "unknown country",
+			phone:   "+265886392814",
+			country: "XX",
+			wantErr: ErrUnknownCountry,
+		},
+		{
+			name:    "too few local digits for Malawi",
+			phone:   "+26512345",
+			country: "MW",
+			wantErr: ErrInvalidPhoneNumber,
+		},
+		{
+			name:    "exceeds E.164 max",
+			phone:   "+2658863928149999",
+			country: "MW",
+			wantErr: ErrPhoneNumberTooLong,
+		},
+		{
+			name:    "valid Dominican Republic secondary code",
+			phone:   "+18291234567",
+			country: "DO",
+		},
+		{
+			name:    "empty phone",
+			phone:   "",
+			country: "MW",
+			wantErr: ErrInvalidPhoneNumber,
+		},
+	}
+
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			err := norm.ValidatePhoneNumber(tc.phone, tc.country)
+			if tc.wantErr != nil {
+				assert.ErrorIs(t, err, tc.wantErr)
+			} else {
+				assert.NoError(t, err)
+			}
+		})
+	}
+}
+
 func BenchmarkNormalize(b *testing.B) {
-	norm := NewNormalizer("MW")
+	norm, _ := NewNormalizer("MW")
 	phoneNumbers := []string{
 		"0886392814",
 		"265886392814",
@@ -283,7 +307,7 @@ func BenchmarkNormalize(b *testing.B) {
 }
 
 func BenchmarkNormalizeBulk(b *testing.B) {
-	norm := NewNormalizer("MW")
+	norm, _ := NewNormalizer("MW")
 	phoneNumbers := []string{
 		"0886392814", "265886392814", "+265886392814", "886392814",
 		"0999123456", "265999123456", "+265999123456", "999123456",

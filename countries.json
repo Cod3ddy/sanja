@@ -1,0 +1,2234 @@
+[
+  {
+    "name": "Afghanistan",
+    "a2": "AF",
+    "a3": "AFG",
+    "numCode": 4,
+    "dialingCode": "93",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Albania",
+    "a2": "AL",
+    "a3": "ALB",
+    "numCode": 8,
+    "dialingCode": "355",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Algeria",
+    "a2": "DZ",
+    "a3": "DZA",
+    "numCode": 12,
+    "dialingCode": "213",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "American Samoa",
+    "a2": "AS",
+    "a3": "ASM",
+    "numCode": 16,
+    "dialingCode": "1-684",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Andorra",
+    "a2": "AD",
+    "a3": "AND",
+    "numCode": 20,
+    "dialingCode": "376",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Angola",
+    "a2": "AO",
+    "a3": "AGO",
+    "numCode": 24,
+    "dialingCode": "244",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Anguilla",
+    "a2": "AI",
+    "a3": "AIA",
+    "numCode": 660,
+    "dialingCode": "1-264",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Antarctica",
+    "a2": "AQ",
+    "a3": "ATA",
+    "numCode": 10,
+    "dialingCode": "672",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "a2": "AG",
+    "a3": "ATG",
+    "numCode": 28,
+    "dialingCode": "1-268",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Argentina",
+    "a2": "AR",
+    "a3": "ARG",
+    "numCode": 32,
+    "dialingCode": "54",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "Armenia",
+    "a2": "AM",
+    "a3": "ARM",
+    "numCode": 51,
+    "dialingCode": "374",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Aruba",
+    "a2": "AW",
+    "a3": "ABW",
+    "numCode": 533,
+    "dialingCode": "297",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Australia",
+    "a2": "AU",
+    "a3": "AUS",
+    "numCode": 36,
+    "dialingCode": "61",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Austria",
+    "a2": "AT",
+    "a3": "AUT",
+    "numCode": 40,
+    "dialingCode": "43",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 13
+  },
+  {
+    "name": "Azerbaijan",
+    "a2": "AZ",
+    "a3": "AZE",
+    "numCode": 31,
+    "dialingCode": "994",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Bahamas",
+    "a2": "BS",
+    "a3": "BHS",
+    "numCode": 44,
+    "dialingCode": "1-242",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Bahrain",
+    "a2": "BH",
+    "a3": "BHR",
+    "numCode": 48,
+    "dialingCode": "973",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bangladesh",
+    "a2": "BD",
+    "a3": "BGD",
+    "numCode": 50,
+    "dialingCode": "880",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Barbados",
+    "a2": "BB",
+    "a3": "BRB",
+    "numCode": 52,
+    "dialingCode": "1-246",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Belarus",
+    "a2": "BY",
+    "a3": "BLR",
+    "numCode": 112,
+    "dialingCode": "375",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Belgium",
+    "a2": "BE",
+    "a3": "BEL",
+    "numCode": 56,
+    "dialingCode": "32",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Belize",
+    "a2": "BZ",
+    "a3": "BLZ",
+    "numCode": 84,
+    "dialingCode": "501",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Benin",
+    "a2": "BJ",
+    "a3": "BEN",
+    "numCode": 204,
+    "dialingCode": "229",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bermuda",
+    "a2": "BM",
+    "a3": "BMU",
+    "numCode": 60,
+    "dialingCode": "1-441",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Bhutan",
+    "a2": "BT",
+    "a3": "BTN",
+    "numCode": 64,
+    "dialingCode": "975",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bolivia",
+    "a2": "BO",
+    "a3": "BOL",
+    "numCode": 68,
+    "dialingCode": "591",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bonaire",
+    "a2": "BQ",
+    "a3": "BES",
+    "numCode": 535,
+    "dialingCode": "599",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "a2": "BA",
+    "a3": "BIH",
+    "numCode": 70,
+    "dialingCode": "387",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Botswana",
+    "a2": "BW",
+    "a3": "BWA",
+    "numCode": 72,
+    "dialingCode": "267",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bouvet Island",
+    "a2": "BV",
+    "a3": "BVT",
+    "numCode": 74,
+    "dialingCode": "47",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Brazil",
+    "a2": "BR",
+    "a3": "BRA",
+    "numCode": 76,
+    "dialingCode": "55",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "a2": "IO",
+    "a3": "IOT",
+    "numCode": 86,
+    "dialingCode": "246",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Brunei Darussalam",
+    "a2": "BN",
+    "a3": "BRN",
+    "numCode": 96,
+    "dialingCode": "673",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Bulgaria",
+    "a2": "BG",
+    "a3": "BGR",
+    "numCode": 100,
+    "dialingCode": "359",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Burkina Faso",
+    "a2": "BF",
+    "a3": "BFA",
+    "numCode": 854,
+    "dialingCode": "226",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Burundi",
+    "a2": "BI",
+    "a3": "BDI",
+    "numCode": 108,
+    "dialingCode": "257",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Cambodia",
+    "a2": "KH",
+    "a3": "KHM",
+    "numCode": 116,
+    "dialingCode": "855",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Cameroon",
+    "a2": "CM",
+    "a3": "CMR",
+    "numCode": 120,
+    "dialingCode": "237",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Canada",
+    "a2": "CA",
+    "a3": "CAN",
+    "numCode": 124,
+    "dialingCode": "1",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Cape Verde",
+    "a2": "CV",
+    "a3": "CPV",
+    "numCode": 132,
+    "dialingCode": "238",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Cayman Islands",
+    "a2": "KY",
+    "a3": "CYM",
+    "numCode": 136,
+    "dialingCode": "1-345",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Central African Republic",
+    "a2": "CF",
+    "a3": "CAF",
+    "numCode": 140,
+    "dialingCode": "236",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Chad",
+    "a2": "TD",
+    "a3": "TCD",
+    "numCode": 148,
+    "dialingCode": "235",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Chile",
+    "a2": "CL",
+    "a3": "CHL",
+    "numCode": 152,
+    "dialingCode": "56",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "China",
+    "a2": "CN",
+    "a3": "CHN",
+    "numCode": 156,
+    "dialingCode": "86",
+    "minLocalDigits": 11,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "Christmas Island",
+    "a2": "CX",
+    "a3": "CXR",
+    "numCode": 162,
+    "dialingCode": "61",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "a2": "CC",
+    "a3": "CCK",
+    "numCode": 166,
+    "dialingCode": "61",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Colombia",
+    "a2": "CO",
+    "a3": "COL",
+    "numCode": 170,
+    "dialingCode": "57",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Comoros",
+    "a2": "KM",
+    "a3": "COM",
+    "numCode": 174,
+    "dialingCode": "269",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Congo",
+    "a2": "CG",
+    "a3": "COG",
+    "numCode": 178,
+    "dialingCode": "242",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "a2": "CD",
+    "a3": "COD",
+    "numCode": 180,
+    "dialingCode": "243",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Cook Islands",
+    "a2": "CK",
+    "a3": "COK",
+    "numCode": 184,
+    "dialingCode": "682",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Costa Rica",
+    "a2": "CR",
+    "a3": "CRI",
+    "numCode": 188,
+    "dialingCode": "506",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Croatia",
+    "a2": "HR",
+    "a3": "HRV",
+    "numCode": 191,
+    "dialingCode": "385",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Cuba",
+    "a2": "CU",
+    "a3": "CUB",
+    "numCode": 192,
+    "dialingCode": "53",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Curacao",
+    "a2": "CW",
+    "a3": "CUW",
+    "numCode": 531,
+    "dialingCode": "599",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Cyprus",
+    "a2": "CY",
+    "a3": "CYP",
+    "numCode": 196,
+    "dialingCode": "357",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Czech Republic",
+    "a2": "CZ",
+    "a3": "CZE",
+    "numCode": 203,
+    "dialingCode": "420",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "a2": "CI",
+    "a3": "CIV",
+    "numCode": 384,
+    "dialingCode": "225",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Denmark",
+    "a2": "DK",
+    "a3": "DNK",
+    "numCode": 208,
+    "dialingCode": "45",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Djibouti",
+    "a2": "DJ",
+    "a3": "DJI",
+    "numCode": 262,
+    "dialingCode": "253",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Dominica",
+    "a2": "DM",
+    "a3": "DMA",
+    "numCode": 212,
+    "dialingCode": "1-767",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Dominican Republic",
+    "a2": "DO",
+    "a3": "DOM",
+    "numCode": 214,
+    "dialingCode": "1-809,1-829,1-849",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Ecuador",
+    "a2": "EC",
+    "a3": "ECU",
+    "numCode": 218,
+    "dialingCode": "593",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Egypt",
+    "a2": "EG",
+    "a3": "EGY",
+    "numCode": 818,
+    "dialingCode": "20",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "El Salvador",
+    "a2": "SV",
+    "a3": "SLV",
+    "numCode": 222,
+    "dialingCode": "503",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Equatorial Guinea",
+    "a2": "GQ",
+    "a3": "GNQ",
+    "numCode": 226,
+    "dialingCode": "240",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Eritrea",
+    "a2": "ER",
+    "a3": "ERI",
+    "numCode": 232,
+    "dialingCode": "291",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Estonia",
+    "a2": "EE",
+    "a3": "EST",
+    "numCode": 233,
+    "dialingCode": "372",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Ethiopia",
+    "a2": "ET",
+    "a3": "ETH",
+    "numCode": 231,
+    "dialingCode": "251",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Falkland Islands (Malvinas)",
+    "a2": "FK",
+    "a3": "FLK",
+    "numCode": 238,
+    "dialingCode": "500",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 5
+  },
+  {
+    "name": "Faroe Islands",
+    "a2": "FO",
+    "a3": "FRO",
+    "numCode": 234,
+    "dialingCode": "298",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 6
+  },
+  {
+    "name": "Fiji",
+    "a2": "FJ",
+    "a3": "FJI",
+    "numCode": 242,
+    "dialingCode": "679",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Finland",
+    "a2": "FI",
+    "a3": "FIN",
+    "numCode": 246,
+    "dialingCode": "358",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "France",
+    "a2": "FR",
+    "a3": "FRA",
+    "numCode": 250,
+    "dialingCode": "33",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "French Guiana",
+    "a2": "GF",
+    "a3": "GUF",
+    "numCode": 254,
+    "dialingCode": "594",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "French Polynesia",
+    "a2": "PF",
+    "a3": "PYF",
+    "numCode": 258,
+    "dialingCode": "689",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "French Southern Territories",
+    "a2": "TF",
+    "a3": "ATF",
+    "numCode": 260,
+    "dialingCode": "262",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Gabon",
+    "a2": "GA",
+    "a3": "GAB",
+    "numCode": 266,
+    "dialingCode": "241",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Gambia",
+    "a2": "GM",
+    "a3": "GMB",
+    "numCode": 270,
+    "dialingCode": "220",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Georgia",
+    "a2": "GE",
+    "a3": "GEO",
+    "numCode": 268,
+    "dialingCode": "995",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Germany",
+    "a2": "DE",
+    "a3": "DEU",
+    "numCode": 276,
+    "dialingCode": "49",
+    "minLocalDigits": 3,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Ghana",
+    "a2": "GH",
+    "a3": "GHA",
+    "numCode": 288,
+    "dialingCode": "233",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Gibraltar",
+    "a2": "GI",
+    "a3": "GIB",
+    "numCode": 292,
+    "dialingCode": "350",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Greece",
+    "a2": "GR",
+    "a3": "GRC",
+    "numCode": 300,
+    "dialingCode": "30",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Greenland",
+    "a2": "GL",
+    "a3": "GRL",
+    "numCode": 304,
+    "dialingCode": "299",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 6
+  },
+  {
+    "name": "Grenada",
+    "a2": "GD",
+    "a3": "GRD",
+    "numCode": 308,
+    "dialingCode": "1-473",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Guadeloupe",
+    "a2": "GP",
+    "a3": "GLP",
+    "numCode": 312,
+    "dialingCode": "590",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Guam",
+    "a2": "GU",
+    "a3": "GUM",
+    "numCode": 316,
+    "dialingCode": "1-671",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Guatemala",
+    "a2": "GT",
+    "a3": "GTM",
+    "numCode": 320,
+    "dialingCode": "502",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Guernsey",
+    "a2": "GG",
+    "a3": "GGY",
+    "numCode": 831,
+    "dialingCode": "44",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Guinea",
+    "a2": "GN",
+    "a3": "GIN",
+    "numCode": 324,
+    "dialingCode": "224",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Guinea-Bissau",
+    "a2": "GW",
+    "a3": "GNB",
+    "numCode": 624,
+    "dialingCode": "245",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Guyana",
+    "a2": "GY",
+    "a3": "GUY",
+    "numCode": 328,
+    "dialingCode": "592",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Haiti",
+    "a2": "HT",
+    "a3": "HTI",
+    "numCode": 332,
+    "dialingCode": "509",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "a2": "HM",
+    "a3": "HMD",
+    "numCode": 334,
+    "dialingCode": "672",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Holy See (Vatican City State)",
+    "a2": "VA",
+    "a3": "VAT",
+    "numCode": 336,
+    "dialingCode": "379",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Honduras",
+    "a2": "HN",
+    "a3": "HND",
+    "numCode": 340,
+    "dialingCode": "504",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Hong Kong",
+    "a2": "HK",
+    "a3": "HKG",
+    "numCode": 344,
+    "dialingCode": "852",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Hungary",
+    "a2": "HU",
+    "a3": "HUN",
+    "numCode": 348,
+    "dialingCode": "36",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Iceland",
+    "a2": "IS",
+    "a3": "ISL",
+    "numCode": 352,
+    "dialingCode": "354",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "India",
+    "a2": "IN",
+    "a3": "IND",
+    "numCode": 356,
+    "dialingCode": "91",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Indonesia",
+    "a2": "ID",
+    "a3": "IDN",
+    "numCode": 360,
+    "dialingCode": "62",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Iran, Islamic Republic of",
+    "a2": "IR",
+    "a3": "IRN",
+    "numCode": 364,
+    "dialingCode": "98",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Iraq",
+    "a2": "IQ",
+    "a3": "IRQ",
+    "numCode": 368,
+    "dialingCode": "964",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Ireland",
+    "a2": "IE",
+    "a3": "IRL",
+    "numCode": 372,
+    "dialingCode": "353",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Isle of Man",
+    "a2": "IM",
+    "a3": "IMN",
+    "numCode": 833,
+    "dialingCode": "44",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Israel",
+    "a2": "IL",
+    "a3": "ISR",
+    "numCode": 376,
+    "dialingCode": "972",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Italy",
+    "a2": "IT",
+    "a3": "ITA",
+    "numCode": 380,
+    "dialingCode": "39",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "Jamaica",
+    "a2": "JM",
+    "a3": "JAM",
+    "numCode": 388,
+    "dialingCode": "1-876",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Japan",
+    "a2": "JP",
+    "a3": "JPN",
+    "numCode": 392,
+    "dialingCode": "81",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "Jersey",
+    "a2": "JE",
+    "a3": "JEY",
+    "numCode": 832,
+    "dialingCode": "44",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Jordan",
+    "a2": "JO",
+    "a3": "JOR",
+    "numCode": 400,
+    "dialingCode": "962",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Kazakhstan",
+    "a2": "KZ",
+    "a3": "KAZ",
+    "numCode": 398,
+    "dialingCode": "7",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Kenya",
+    "a2": "KE",
+    "a3": "KEN",
+    "numCode": 404,
+    "dialingCode": "254",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Kiribati",
+    "a2": "KI",
+    "a3": "KIR",
+    "numCode": 296,
+    "dialingCode": "686",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Korea, Democratic People's Republic of",
+    "a2": "KP",
+    "a3": "PRK",
+    "numCode": 408,
+    "dialingCode": "850",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Korea, Republic of",
+    "a2": "KR",
+    "a3": "KOR",
+    "numCode": 410,
+    "dialingCode": "82",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 11
+  },
+  {
+    "name": "Kuwait",
+    "a2": "KW",
+    "a3": "KWT",
+    "numCode": 414,
+    "dialingCode": "965",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Kyrgyzstan",
+    "a2": "KG",
+    "a3": "KGZ",
+    "numCode": 417,
+    "dialingCode": "996",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Lao People's Democratic Republic",
+    "a2": "LA",
+    "a3": "LAO",
+    "numCode": 418,
+    "dialingCode": "856",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Latvia",
+    "a2": "LV",
+    "a3": "LVA",
+    "numCode": 428,
+    "dialingCode": "371",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Lebanon",
+    "a2": "LB",
+    "a3": "LBN",
+    "numCode": 422,
+    "dialingCode": "961",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Lesotho",
+    "a2": "LS",
+    "a3": "LSO",
+    "numCode": 426,
+    "dialingCode": "266",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Liberia",
+    "a2": "LR",
+    "a3": "LBR",
+    "numCode": 430,
+    "dialingCode": "231",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Libya",
+    "a2": "LY",
+    "a3": "LBY",
+    "numCode": 434,
+    "dialingCode": "218",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Liechtenstein",
+    "a2": "LI",
+    "a3": "LIE",
+    "numCode": 438,
+    "dialingCode": "423",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Lithuania",
+    "a2": "LT",
+    "a3": "LTU",
+    "numCode": 440,
+    "dialingCode": "370",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Luxembourg",
+    "a2": "LU",
+    "a3": "LUX",
+    "numCode": 442,
+    "dialingCode": "352",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Macao",
+    "a2": "MO",
+    "a3": "MAC",
+    "numCode": 446,
+    "dialingCode": "853",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Macedonia, the Former Yugoslav Republic of",
+    "a2": "MK",
+    "a3": "MKD",
+    "numCode": 807,
+    "dialingCode": "389",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Madagascar",
+    "a2": "MG",
+    "a3": "MDG",
+    "numCode": 450,
+    "dialingCode": "261",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Malawi",
+    "a2": "MW",
+    "a3": "MWI",
+    "numCode": 454,
+    "dialingCode": "265",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Malaysia",
+    "a2": "MY",
+    "a3": "MYS",
+    "numCode": 458,
+    "dialingCode": "60",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Maldives",
+    "a2": "MV",
+    "a3": "MDV",
+    "numCode": 462,
+    "dialingCode": "960",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Mali",
+    "a2": "ML",
+    "a3": "MLI",
+    "numCode": 466,
+    "dialingCode": "223",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Malta",
+    "a2": "MT",
+    "a3": "MLT",
+    "numCode": 470,
+    "dialingCode": "356",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Marshall Islands",
+    "a2": "MH",
+    "a3": "MHL",
+    "numCode": 584,
+    "dialingCode": "692",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Martinique",
+    "a2": "MQ",
+    "a3": "MTQ",
+    "numCode": 474,
+    "dialingCode": "596",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Mauritania",
+    "a2": "MR",
+    "a3": "MRT",
+    "numCode": 478,
+    "dialingCode": "222",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Mauritius",
+    "a2": "MU",
+    "a3": "MUS",
+    "numCode": 480,
+    "dialingCode": "230",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Mayotte",
+    "a2": "YT",
+    "a3": "MYT",
+    "numCode": 175,
+    "dialingCode": "262",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Mexico",
+    "a2": "MX",
+    "a3": "MEX",
+    "numCode": 484,
+    "dialingCode": "52",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Micronesia, Federated States of",
+    "a2": "FM",
+    "a3": "FSM",
+    "numCode": 583,
+    "dialingCode": "691",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Moldova, Republic of",
+    "a2": "MD",
+    "a3": "MDA",
+    "numCode": 498,
+    "dialingCode": "373",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Monaco",
+    "a2": "MC",
+    "a3": "MCO",
+    "numCode": 492,
+    "dialingCode": "377",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Mongolia",
+    "a2": "MN",
+    "a3": "MNG",
+    "numCode": 496,
+    "dialingCode": "976",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Montenegro",
+    "a2": "ME",
+    "a3": "MNE",
+    "numCode": 499,
+    "dialingCode": "382",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Montserrat",
+    "a2": "MS",
+    "a3": "MSR",
+    "numCode": 500,
+    "dialingCode": "1-664",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Morocco",
+    "a2": "MA",
+    "a3": "MAR",
+    "numCode": 504,
+    "dialingCode": "212",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Mozambique",
+    "a2": "MZ",
+    "a3": "MOZ",
+    "numCode": 508,
+    "dialingCode": "258",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Myanmar",
+    "a2": "MM",
+    "a3": "MMR",
+    "numCode": 104,
+    "dialingCode": "95",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Namibia",
+    "a2": "NA",
+    "a3": "NAM",
+    "numCode": 516,
+    "dialingCode": "264",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Nauru",
+    "a2": "NR",
+    "a3": "NRU",
+    "numCode": 520,
+    "dialingCode": "674",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Nepal",
+    "a2": "NP",
+    "a3": "NPL",
+    "numCode": 524,
+    "dialingCode": "977",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Netherlands",
+    "a2": "NL",
+    "a3": "NLD",
+    "numCode": 528,
+    "dialingCode": "31",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "New Caledonia",
+    "a2": "NC",
+    "a3": "NCL",
+    "numCode": 540,
+    "dialingCode": "687",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 6
+  },
+  {
+    "name": "New Zealand",
+    "a2": "NZ",
+    "a3": "NZL",
+    "numCode": 554,
+    "dialingCode": "64",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Nicaragua",
+    "a2": "NI",
+    "a3": "NIC",
+    "numCode": 558,
+    "dialingCode": "505",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Niger",
+    "a2": "NE",
+    "a3": "NER",
+    "numCode": 562,
+    "dialingCode": "227",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Nigeria",
+    "a2": "NG",
+    "a3": "NGA",
+    "numCode": 566,
+    "dialingCode": "234",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Niue",
+    "a2": "NU",
+    "a3": "NIU",
+    "numCode": 570,
+    "dialingCode": "683",
+    "minLocalDigits": 4,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Norfolk Island",
+    "a2": "NF",
+    "a3": "NFK",
+    "numCode": 574,
+    "dialingCode": "672",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "a2": "MP",
+    "a3": "MNP",
+    "numCode": 580,
+    "dialingCode": "1-670",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Norway",
+    "a2": "NO",
+    "a3": "NOR",
+    "numCode": 578,
+    "dialingCode": "47",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Oman",
+    "a2": "OM",
+    "a3": "OMN",
+    "numCode": 512,
+    "dialingCode": "968",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Pakistan",
+    "a2": "PK",
+    "a3": "PAK",
+    "numCode": 586,
+    "dialingCode": "92",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Palau",
+    "a2": "PW",
+    "a3": "PLW",
+    "numCode": 585,
+    "dialingCode": "680",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Palestine, State of",
+    "a2": "PS",
+    "a3": "PSE",
+    "numCode": 275,
+    "dialingCode": "970",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Panama",
+    "a2": "PA",
+    "a3": "PAN",
+    "numCode": 591,
+    "dialingCode": "507",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Papua New Guinea",
+    "a2": "PG",
+    "a3": "PNG",
+    "numCode": 598,
+    "dialingCode": "675",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Paraguay",
+    "a2": "PY",
+    "a3": "PRY",
+    "numCode": 600,
+    "dialingCode": "595",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Peru",
+    "a2": "PE",
+    "a3": "PER",
+    "numCode": 604,
+    "dialingCode": "51",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Philippines",
+    "a2": "PH",
+    "a3": "PHL",
+    "numCode": 608,
+    "dialingCode": "63",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Pitcairn",
+    "a2": "PN",
+    "a3": "PCN",
+    "numCode": 612,
+    "dialingCode": "870",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 12
+  },
+  {
+    "name": "Poland",
+    "a2": "PL",
+    "a3": "POL",
+    "numCode": 616,
+    "dialingCode": "48",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Portugal",
+    "a2": "PT",
+    "a3": "PRT",
+    "numCode": 620,
+    "dialingCode": "351",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Puerto Rico",
+    "a2": "PR",
+    "a3": "PRI",
+    "numCode": 630,
+    "dialingCode": "1",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Qatar",
+    "a2": "QA",
+    "a3": "QAT",
+    "numCode": 634,
+    "dialingCode": "974",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Romania",
+    "a2": "RO",
+    "a3": "ROU",
+    "numCode": 642,
+    "dialingCode": "40",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Russian Federation",
+    "a2": "RU",
+    "a3": "RUS",
+    "numCode": 643,
+    "dialingCode": "7",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Rwanda",
+    "a2": "RW",
+    "a3": "RWA",
+    "numCode": 646,
+    "dialingCode": "250",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Reunion",
+    "a2": "RE",
+    "a3": "REU",
+    "numCode": 638,
+    "dialingCode": "262",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Saint Barthelemy",
+    "a2": "BL",
+    "a3": "BLM",
+    "numCode": 652,
+    "dialingCode": "590",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Saint Helena",
+    "a2": "SH",
+    "a3": "SHN",
+    "numCode": 654,
+    "dialingCode": "290",
+    "minLocalDigits": 4,
+    "maxLocalDigits": 4
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "a2": "KN",
+    "a3": "KNA",
+    "numCode": 659,
+    "dialingCode": "1-869",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Saint Lucia",
+    "a2": "LC",
+    "a3": "LCA",
+    "numCode": 662,
+    "dialingCode": "1-758",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Saint Martin (French part)",
+    "a2": "MF",
+    "a3": "MAF",
+    "numCode": 663,
+    "dialingCode": "590",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "a2": "PM",
+    "a3": "SPM",
+    "numCode": 666,
+    "dialingCode": "508",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 6
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "a2": "VC",
+    "a3": "VCT",
+    "numCode": 670,
+    "dialingCode": "1-784",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Samoa",
+    "a2": "WS",
+    "a3": "WSM",
+    "numCode": 882,
+    "dialingCode": "685",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "San Marino",
+    "a2": "SM",
+    "a3": "SMR",
+    "numCode": 674,
+    "dialingCode": "378",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "a2": "ST",
+    "a3": "STP",
+    "numCode": 678,
+    "dialingCode": "239",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Saudi Arabia",
+    "a2": "SA",
+    "a3": "SAU",
+    "numCode": 682,
+    "dialingCode": "966",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Senegal",
+    "a2": "SN",
+    "a3": "SEN",
+    "numCode": 686,
+    "dialingCode": "221",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Serbia",
+    "a2": "RS",
+    "a3": "SRB",
+    "numCode": 688,
+    "dialingCode": "381",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Seychelles",
+    "a2": "SC",
+    "a3": "SYC",
+    "numCode": 690,
+    "dialingCode": "248",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Sierra Leone",
+    "a2": "SL",
+    "a3": "SLE",
+    "numCode": 694,
+    "dialingCode": "232",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Singapore",
+    "a2": "SG",
+    "a3": "SGP",
+    "numCode": 702,
+    "dialingCode": "65",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Sint Maarten (Dutch part)",
+    "a2": "SX",
+    "a3": "SXM",
+    "numCode": 534,
+    "dialingCode": "1-721",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Slovakia",
+    "a2": "SK",
+    "a3": "SVK",
+    "numCode": 703,
+    "dialingCode": "421",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Slovenia",
+    "a2": "SI",
+    "a3": "SVN",
+    "numCode": 705,
+    "dialingCode": "386",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Solomon Islands",
+    "a2": "SB",
+    "a3": "SLB",
+    "numCode": 90,
+    "dialingCode": "677",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Somalia",
+    "a2": "SO",
+    "a3": "SOM",
+    "numCode": 706,
+    "dialingCode": "252",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "South Africa",
+    "a2": "ZA",
+    "a3": "ZAF",
+    "numCode": 710,
+    "dialingCode": "27",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "South Georgia and the South Sandwich Islands",
+    "a2": "GS",
+    "a3": "SGS",
+    "numCode": 239,
+    "dialingCode": "500",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 5
+  },
+  {
+    "name": "South Sudan",
+    "a2": "SS",
+    "a3": "SSD",
+    "numCode": 728,
+    "dialingCode": "211",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Spain",
+    "a2": "ES",
+    "a3": "ESP",
+    "numCode": 724,
+    "dialingCode": "34",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Sri Lanka",
+    "a2": "LK",
+    "a3": "LKA",
+    "numCode": 144,
+    "dialingCode": "94",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Sudan",
+    "a2": "SD",
+    "a3": "SDN",
+    "numCode": 729,
+    "dialingCode": "249",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Suriname",
+    "a2": "SR",
+    "a3": "SUR",
+    "numCode": 740,
+    "dialingCode": "597",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "a2": "SJ",
+    "a3": "SJM",
+    "numCode": 744,
+    "dialingCode": "47",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Swaziland",
+    "a2": "SZ",
+    "a3": "SWZ",
+    "numCode": 748,
+    "dialingCode": "268",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Sweden",
+    "a2": "SE",
+    "a3": "SWE",
+    "numCode": 752,
+    "dialingCode": "46",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Switzerland",
+    "a2": "CH",
+    "a3": "CHE",
+    "numCode": 756,
+    "dialingCode": "41",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Syrian Arab Republic",
+    "a2": "SY",
+    "a3": "SYR",
+    "numCode": 760,
+    "dialingCode": "963",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Taiwan",
+    "a2": "TW",
+    "a3": "TWN",
+    "numCode": 158,
+    "dialingCode": "886",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Tajikistan",
+    "a2": "TJ",
+    "a3": "TJK",
+    "numCode": 762,
+    "dialingCode": "992",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "United Republic of Tanzania",
+    "a2": "TZ",
+    "a3": "TZA",
+    "numCode": 834,
+    "dialingCode": "255",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Thailand",
+    "a2": "TH",
+    "a3": "THA",
+    "numCode": 764,
+    "dialingCode": "66",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Timor-Leste",
+    "a2": "TL",
+    "a3": "TLS",
+    "numCode": 626,
+    "dialingCode": "670",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Togo",
+    "a2": "TG",
+    "a3": "TGO",
+    "numCode": 768,
+    "dialingCode": "228",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Tokelau",
+    "a2": "TK",
+    "a3": "TKL",
+    "numCode": 772,
+    "dialingCode": "690",
+    "minLocalDigits": 4,
+    "maxLocalDigits": 4
+  },
+  {
+    "name": "Tonga",
+    "a2": "TO",
+    "a3": "TON",
+    "numCode": 776,
+    "dialingCode": "676",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "a2": "TT",
+    "a3": "TTO",
+    "numCode": 780,
+    "dialingCode": "1-868",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Tunisia",
+    "a2": "TN",
+    "a3": "TUN",
+    "numCode": 788,
+    "dialingCode": "216",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Turkey",
+    "a2": "TR",
+    "a3": "TUR",
+    "numCode": 792,
+    "dialingCode": "90",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Turkmenistan",
+    "a2": "TM",
+    "a3": "TKM",
+    "numCode": 795,
+    "dialingCode": "993",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 8
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "a2": "TC",
+    "a3": "TCA",
+    "numCode": 796,
+    "dialingCode": "1-649",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Tuvalu",
+    "a2": "TV",
+    "a3": "TUV",
+    "numCode": 798,
+    "dialingCode": "688",
+    "minLocalDigits": 5,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Uganda",
+    "a2": "UG",
+    "a3": "UGA",
+    "numCode": 800,
+    "dialingCode": "256",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Ukraine",
+    "a2": "UA",
+    "a3": "UKR",
+    "numCode": 804,
+    "dialingCode": "380",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "United Arab Emirates",
+    "a2": "AE",
+    "a3": "ARE",
+    "numCode": 784,
+    "dialingCode": "971",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "United Kingdom",
+    "a2": "GB",
+    "a3": "GBR",
+    "numCode": 826,
+    "dialingCode": "44",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "United States",
+    "a2": "US",
+    "a3": "USA",
+    "numCode": 840,
+    "dialingCode": "1",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "a2": "UM",
+    "a3": "UMI",
+    "numCode": 581,
+    "dialingCode": "1",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Uruguay",
+    "a2": "UY",
+    "a3": "URY",
+    "numCode": 858,
+    "dialingCode": "598",
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Uzbekistan",
+    "a2": "UZ",
+    "a3": "UZB",
+    "numCode": 860,
+    "dialingCode": "998",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Vanuatu",
+    "a2": "VU",
+    "a3": "VUT",
+    "numCode": 548,
+    "dialingCode": "678",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Venezuela",
+    "a2": "VE",
+    "a3": "VEN",
+    "numCode": 862,
+    "dialingCode": "58",
+    "minLocalDigits": 10,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "Viet Nam",
+    "a2": "VN",
+    "a3": "VNM",
+    "numCode": 704,
+    "dialingCode": "84",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 10
+  },
+  {
+    "name": "British Virgin Islands",
+    "a2": "VG",
+    "a3": "VGB",
+    "numCode": 92,
+    "dialingCode": "1-284",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "US Virgin Islands",
+    "a2": "VI",
+    "a3": "VIR",
+    "numCode": 850,
+    "dialingCode": "1-340",
+    "minLocalDigits": 7,
+    "maxLocalDigits": 7
+  },
+  {
+    "name": "Wallis and Futuna",
+    "a2": "WF",
+    "a3": "WLF",
+    "numCode": 876,
+    "dialingCode": "681",
+    "minLocalDigits": 6,
+    "maxLocalDigits": 6
+  },
+  {
+    "name": "Western Sahara",
+    "a2": "EH",
+    "a3": "ESH",
+    "numCode": 732,
+    "dialingCode": "212",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Yemen",
+    "a2": "YE",
+    "a3": "YEM",
+    "numCode": 887,
+    "dialingCode": "967",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Zambia",
+    "a2": "ZM",
+    "a3": "ZMB",
+    "numCode": 894,
+    "dialingCode": "260",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  },
+  {
+    "name": "Zimbabwe",
+    "a2": "ZW",
+    "a3": "ZWE",
+    "numCode": 716,
+    "dialingCode": "263",
+    "minLocalDigits": 9,
+    "maxLocalDigits": 9
+  }
+]
