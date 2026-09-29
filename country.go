@@ -2,6 +2,7 @@ package sanja
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 )
 
@@ -16,6 +17,8 @@ type Country struct {
 	MainCountryForCode  bool   `json:"mainCountryForCode"`
 	MinLocalDigits      int    `json:"minLocalDigits"`
 	MaxLocalDigits      int    `json:"maxLocalDigits"`
+
+	internationalPrefixPattern *regexp.Regexp
 }
 
 const longestDialingCodeDigits = 4

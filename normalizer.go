@@ -17,10 +17,9 @@ const (
 
 // Normalizer handles phone number normalization to E.164 format.
 type Normalizer struct {
-	countries           []Country
-	defaultCountry      *Country
-	codeMap             map[string]*Country
-	internationalPrefix *regexp.Regexp
+	countries      []Country
+	defaultCountry *Country
+	codeMap        map[string]*Country
 }
 
 // NewNormalizer creates a Normalizer with the given ISO 3166-1 alpha-2 code as the default country.
@@ -45,13 +44,6 @@ func NewNormalizer(defaultCountryA2 string) (*Normalizer, error) {
 		return nil, fmt.Errorf("%w: %s", ErrUnknownCountry, defaultCountryA2)
 	}
 
-	internationalPrefix, err := compileInternationalPrefix(n.defaultCountry.InternationalPrefix)
-	if err != nil {
-		return nil, fmt.Errorf("sanja: international prefix for %s: %w", n.defaultCountry.A2, err)
-	}
-
-	n.internationalPrefix = internationalPrefix
-
 	return n, nil
 }
 
@@ -72,7 +64,7 @@ func (n *Normalizer) Normalize(phone string) (string, error) {
 		return "", err
 	}
 
-	cleaned = n.replaceInternationalPrefix(cleaned)
+	cleaned = replaceInternationalPrefix(cleaned, n.defaultCountry)
 
 	if strings.HasPrefix(cleaned, "+") {
 		digits := cleaned[1:]
@@ -148,12 +140,12 @@ func compileInternationalPrefix(pattern string) (*regexp.Regexp, error) {
 	return regexp.Compile("^(?:" + pattern + ")")
 }
 
-func (n *Normalizer) replaceInternationalPrefix(phone string) string {
-	if n.internationalPrefix == nil {
+func replaceInternationalPrefix(phone string, country *Country) string {
+	if country.internationalPrefixPattern == nil {
 		return phone
 	}
 
-	prefix := n.internationalPrefix.FindString(phone)
+	prefix := country.internationalPrefixPattern.FindString(phone)
 	rest := phone[len(prefix):]
 	if prefix == "" || rest == "" || rest[0] == '0' {
 		return phone
