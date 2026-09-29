@@ -68,45 +68,12 @@ func (n *Normalizer) ValidatePhoneNumber(phone, countryA2 string) error {
 		return fmt.Errorf("%w: %s", ErrUnknownCountry, countryA2)
 	}
 
-	cleaned, err := cleanPhone(phone)
+	e164, err := normalize(phone, country)
 	if err != nil {
 		return err
 	}
 
-	if cleaned == "" {
-		return ErrInvalidPhoneNumber
-	}
-
-	var matchedCode string
-	for _, code := range splitDialingCodes(country.DialingCode) {
-		if strings.HasPrefix(cleaned, "+"+code) || strings.HasPrefix(cleaned, code) {
-			matchedCode = code
-			break
-		}
-	}
-
-	if matchedCode == "" {
-		return fmt.Errorf("%w: expected code for %s", ErrPhoneNumberAndCountryCodeMismatch, country.Name)
-	}
-
-	withoutPlus := strings.TrimPrefix(cleaned, "+")
-	subscriber := withoutPlus[len(matchedCode):]
-
-	if len(matchedCode)+len(subscriber) > 15 {
-		return fmt.Errorf("%w: exceeds E.164 maximum of 15 digits", ErrPhoneNumberTooLong)
-	}
-
-	if len(subscriber) < country.MinLocalDigits {
-		return fmt.Errorf("%w: %s requires at least %d local digits, got %d",
-			ErrInvalidPhoneNumber, country.Name, country.MinLocalDigits, len(subscriber))
-	}
-
-	if len(subscriber) > country.MaxLocalDigits {
-		return fmt.Errorf("%w: %s allows at most %d local digits, got %d",
-			ErrInvalidPhoneNumber, country.Name, country.MaxLocalDigits, len(subscriber))
-	}
-
-	return nil
+	return checkLocalDigits(e164, country)
 }
 
 func checkLocalDigits(e164 string, country *Country) error {

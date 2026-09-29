@@ -129,12 +129,13 @@ func (n *Normalizer) NormalizeBulk(phones []string) ([]string, []error) {
 // dialing code. the leading "0" is treated as a local dial prefix and returns false immediately,
 // preventing false matches against country codes that share digits with local number prefixes.
 func hasCountryCode(phone string, country *Country) bool {
-	if strings.HasPrefix(phone, "0") {
+	if strings.HasPrefix(phone, "0") || len(phone) <= country.MaxLocalDigits {
 		return false
 	}
 
 	for _, code := range splitDialingCodes(country.DialingCode) {
-		if strings.HasPrefix(phone, code) {
+		local, found := strings.CutPrefix(phone, code)
+		if found && len(local) >= country.MinLocalDigits && len(local) <= country.MaxLocalDigits {
 			return true
 		}
 	}

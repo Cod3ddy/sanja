@@ -61,6 +61,7 @@ func TestNormalize(t *testing.T) {
 		{name: "only special characters", input: "+-() ", expectError: true, errorIs: ErrInvalidPhoneNumber},
 		{name: "only zeros", input: "0000", expectError: true, errorIs: ErrInvalidPhoneNumber},
 		{name: "short number is formatted, not checked", input: "123", expected: "+265123"},
+		{name: "local number starting with the country code", input: "265123456", expected: "+265265123456"},
 		{name: "exceeds E.164 max", input: "08863928149999999", expectError: true, errorIs: ErrPhoneNumberTooLong},
 	}
 
@@ -442,6 +443,38 @@ func TestValidatePhoneNumber(t *testing.T) {
 			phone:   "",
 			country: "MW",
 			wantErr: ErrInvalidPhoneNumber,
+		},
+		{
+			name:    "local number",
+			phone:   "0886392814",
+			country: "MW",
+		},
+		{
+			name:    "country code without plus",
+			phone:   "265886392814",
+			country: "MW",
+		},
+		{
+			name:    "local number starting with the country code digits",
+			phone:   "265123456",
+			country: "MW",
+		},
+		{
+			name:    "international prefix of the given country",
+			phone:   "011265886392814",
+			country: "US",
+			wantErr: ErrPhoneNumberAndCountryCodeMismatch,
+		},
+		{
+			name:    "local number too short",
+			phone:   "099123456",
+			country: "MW",
+			wantErr: ErrInvalidPhoneNumber,
+		},
+		{
+			name:    "lower case country",
+			phone:   "+265886392814",
+			country: "mw",
 		},
 	}
 
