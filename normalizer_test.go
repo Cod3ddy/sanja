@@ -25,6 +25,12 @@ func TestNewNormalizer_ValidCountry(t *testing.T) {
 	assert.NotNil(t, n)
 }
 
+func TestNewNormalizer_LowerCaseCountry(t *testing.T) {
+	n, err := NewNormalizer("mw")
+	require.NoError(t, err)
+	assert.Equal(t, "MW", n.defaultCountry.A2)
+}
+
 func TestNormalize(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 
@@ -188,6 +194,12 @@ func TestGetCountryByA2(t *testing.T) {
 		require.NotNil(t, c)
 		assert.Equal(t, "United States", c.Name)
 		assert.Equal(t, "1", c.DialingCode)
+	})
+
+	t.Run("lower case", func(t *testing.T) {
+		c := norm.GetCountryByA2("us")
+		require.NotNil(t, c)
+		assert.Equal(t, "US", c.A2)
 	})
 
 	t.Run("not found returns nil", func(t *testing.T) {

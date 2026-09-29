@@ -19,7 +19,7 @@ type Country struct {
 // GetCountryByA2 returns a country by its ISO 3166-1 alpha-2 code, or nil if not found.
 func (n *Normalizer) GetCountryByA2(a2 string) *Country {
 	for i := range n.countries {
-		if n.countries[i].A2 == a2 {
+		if strings.EqualFold(n.countries[i].A2, a2) {
 			return &n.countries[i]
 		}
 	}
