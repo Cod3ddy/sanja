@@ -1,0 +1,710 @@
+[
+  {
+    "a2": "AO",
+    "countryCode": "244",
+    "type": "fixedLine",
+    "number": "222123456"
+  },
+  {
+    "a2": "AO",
+    "countryCode": "244",
+    "type": "mobile",
+    "number": "923123456"
+  },
+  {
+    "a2": "BF",
+    "countryCode": "226",
+    "type": "fixedLine",
+    "number": "20491234"
+  },
+  {
+    "a2": "BF",
+    "countryCode": "226",
+    "type": "mobile",
+    "number": "70123456"
+  },
+  {
+    "a2": "BI",
+    "countryCode": "257",
+    "type": "fixedLine",
+    "number": "22201234"
+  },
+  {
+    "a2": "BI",
+    "countryCode": "257",
+    "type": "mobile",
+    "number": "79561234"
+  },
+  {
+    "a2": "BJ",
+    "countryCode": "229",
+    "type": "fixedLine",
+    "number": "0120211234"
+  },
+  {
+    "a2": "BJ",
+    "countryCode": "229",
+    "type": "mobile",
+    "number": "0195123456"
+  },
+  {
+    "a2": "BW",
+    "countryCode": "267",
+    "type": "fixedLine",
+    "number": "2401234"
+  },
+  {
+    "a2": "BW",
+    "countryCode": "267",
+    "type": "mobile",
+    "number": "71123456"
+  },
+  {
+    "a2": "CD",
+    "countryCode": "243",
+    "type": "fixedLine",
+    "number": "1234567"
+  },
+  {
+    "a2": "CD",
+    "countryCode": "243",
+    "type": "mobile",
+    "number": "991234567"
+  },
+  {
+    "a2": "CF",
+    "countryCode": "236",
+    "type": "fixedLine",
+    "number": "21612345"
+  },
+  {
+    "a2": "CF",
+    "countryCode": "236",
+    "type": "mobile",
+    "number": "70012345"
+  },
+  {
+    "a2": "CG",
+    "countryCode": "242",
+    "type": "fixedLine",
+    "number": "222123456"
+  },
+  {
+    "a2": "CG",
+    "countryCode": "242",
+    "type": "mobile",
+    "number": "061234567"
+  },
+  {
+    "a2": "CI",
+    "countryCode": "225",
+    "type": "fixedLine",
+    "number": "2123456789"
+  },
+  {
+    "a2": "CI",
+    "countryCode": "225",
+    "type": "mobile",
+    "number": "0123456789"
+  },
+  {
+    "a2": "CM",
+    "countryCode": "237",
+    "type": "fixedLine",
+    "number": "222123456"
+  },
+  {
+    "a2": "CM",
+    "countryCode": "237",
+    "type": "mobile",
+    "number": "671234567"
+  },
+  {
+    "a2": "CV",
+    "countryCode": "238",
+    "type": "fixedLine",
+    "number": "2211234"
+  },
+  {
+    "a2": "CV",
+    "countryCode": "238",
+    "type": "mobile",
+    "number": "9911234"
+  },
+  {
+    "a2": "DJ",
+    "countryCode": "253",
+    "type": "fixedLine",
+    "number": "21360003"
+  },
+  {
+    "a2": "DJ",
+    "countryCode": "253",
+    "type": "mobile",
+    "number": "77831001"
+  },
+  {
+    "a2": "DZ",
+    "countryCode": "213",
+    "type": "fixedLine",
+    "number": "12345678"
+  },
+  {
+    "a2": "DZ",
+    "countryCode": "213",
+    "type": "mobile",
+    "number": "551234567"
+  },
+  {
+    "a2": "EG",
+    "countryCode": "20",
+    "type": "fixedLine",
+    "number": "234567890"
+  },
+  {
+    "a2": "EG",
+    "countryCode": "20",
+    "type": "mobile",
+    "number": "1001234567"
+  },
+  {
+    "a2": "EH",
+    "countryCode": "212",
+    "type": "fixedLine",
+    "number": "528812345"
+  },
+  {
+    "a2": "EH",
+    "countryCode": "212",
+    "type": "mobile",
+    "number": "650123456"
+  },
+  {
+    "a2": "ER",
+    "countryCode": "291",
+    "type": "fixedLine",
+    "number": "8370362"
+  },
+  {
+    "a2": "ER",
+    "countryCode": "291",
+    "type": "mobile",
+    "number": "7123456"
+  },
+  {
+    "a2": "ET",
+    "countryCode": "251",
+    "type": "fixedLine",
+    "number": "111112345"
+  },
+  {
+    "a2": "ET",
+    "countryCode": "251",
+    "type": "mobile",
+    "number": "911234567"
+  },
+  {
+    "a2": "GA",
+    "countryCode": "241",
+    "type": "fixedLine",
+    "number": "01441234"
+  },
+  {
+    "a2": "GA",
+    "countryCode": "241",
+    "type": "mobile",
+    "number": "06031234"
+  },
+  {
+    "a2": "GH",
+    "countryCode": "233",
+    "type": "fixedLine",
+    "number": "302345678"
+  },
+  {
+    "a2": "GH",
+    "countryCode": "233",
+    "type": "mobile",
+    "number": "231234567"
+  },
+  {
+    "a2": "GM",
+    "countryCode": "220",
+    "type": "fixedLine",
+    "number": "5661234"
+  },
+  {
+    "a2": "GM",
+    "countryCode": "220",
+    "type": "mobile",
+    "number": "3012345"
+  },
+  {
+    "a2": "GN",
+    "countryCode": "224",
+    "type": "fixedLine",
+    "number": "30241234"
+  },
+  {
+    "a2": "GN",
+    "countryCode": "224",
+    "type": "mobile",
+    "number": "601123456"
+  },
+  {
+    "a2": "GQ",
+    "countryCode": "240",
+    "type": "fixedLine",
+    "number": "333091234"
+  },
+  {
+    "a2": "GQ",
+    "countryCode": "240",
+    "type": "mobile",
+    "number": "222123456"
+  },
+  {
+    "a2": "GW",
+    "countryCode": "245",
+    "type": "fixedLine",
+    "number": "443201234"
+  },
+  {
+    "a2": "GW",
+    "countryCode": "245",
+    "type": "mobile",
+    "number": "955012345"
+  },
+  {
+    "a2": "IO",
+    "countryCode": "246",
+    "type": "fixedLine",
+    "number": "3709100"
+  },
+  {
+    "a2": "IO",
+    "countryCode": "246",
+    "type": "mobile",
+    "number": "3801234"
+  },
+  {
+    "a2": "KE",
+    "countryCode": "254",
+    "type": "fixedLine",
+    "number": "202012345"
+  },
+  {
+    "a2": "KE",
+    "countryCode": "254",
+    "type": "mobile",
+    "number": "712123456"
+  },
+  {
+    "a2": "KM",
+    "countryCode": "269",
+    "type": "fixedLine",
+    "number": "7712345"
+  },
+  {
+    "a2": "KM",
+    "countryCode": "269",
+    "type": "mobile",
+    "number": "3212345"
+  },
+  {
+    "a2": "LR",
+    "countryCode": "231",
+    "type": "fixedLine",
+    "number": "21234567"
+  },
+  {
+    "a2": "LR",
+    "countryCode": "231",
+    "type": "mobile",
+    "number": "770123456"
+  },
+  {
+    "a2": "LS",
+    "countryCode": "266",
+    "type": "fixedLine",
+    "number": "22123456"
+  },
+  {
+    "a2": "LS",
+    "countryCode": "266",
+    "type": "mobile",
+    "number": "50123456"
+  },
+  {
+    "a2": "LY",
+    "countryCode": "218",
+    "type": "fixedLine",
+    "number": "212345678"
+  },
+  {
+    "a2": "LY",
+    "countryCode": "218",
+    "type": "mobile",
+    "number": "912345678"
+  },
+  {
+    "a2": "MA",
+    "countryCode": "212",
+    "type": "fixedLine",
+    "number": "520123456"
+  },
+  {
+    "a2": "MA",
+    "countryCode": "212",
+    "type": "mobile",
+    "number": "650123456"
+  },
+  {
+    "a2": "MG",
+    "countryCode": "261",
+    "type": "fixedLine",
+    "number": "202123456"
+  },
+  {
+    "a2": "MG",
+    "countryCode": "261",
+    "type": "mobile",
+    "number": "321234567"
+  },
+  {
+    "a2": "ML",
+    "countryCode": "223",
+    "type": "fixedLine",
+    "number": "20212345"
+  },
+  {
+    "a2": "ML",
+    "countryCode": "223",
+    "type": "mobile",
+    "number": "65012345"
+  },
+  {
+    "a2": "MR",
+    "countryCode": "222",
+    "type": "fixedLine",
+    "number": "35123456"
+  },
+  {
+    "a2": "MR",
+    "countryCode": "222",
+    "type": "mobile",
+    "number": "22123456"
+  },
+  {
+    "a2": "MU",
+    "countryCode": "230",
+    "type": "fixedLine",
+    "number": "54480123"
+  },
+  {
+    "a2": "MU",
+    "countryCode": "230",
+    "type": "mobile",
+    "number": "52512345"
+  },
+  {
+    "a2": "MW",
+    "countryCode": "265",
+    "type": "fixedLine",
+    "number": "1234567"
+  },
+  {
+    "a2": "MW",
+    "countryCode": "265",
+    "type": "mobile",
+    "number": "991234567"
+  },
+  {
+    "a2": "MZ",
+    "countryCode": "258",
+    "type": "fixedLine",
+    "number": "21123456"
+  },
+  {
+    "a2": "MZ",
+    "countryCode": "258",
+    "type": "mobile",
+    "number": "821234567"
+  },
+  {
+    "a2": "NA",
+    "countryCode": "264",
+    "type": "fixedLine",
+    "number": "61221234"
+  },
+  {
+    "a2": "NA",
+    "countryCode": "264",
+    "type": "mobile",
+    "number": "811234567"
+  },
+  {
+    "a2": "NE",
+    "countryCode": "227",
+    "type": "fixedLine",
+    "number": "20201234"
+  },
+  {
+    "a2": "NE",
+    "countryCode": "227",
+    "type": "mobile",
+    "number": "93123456"
+  },
+  {
+    "a2": "NG",
+    "countryCode": "234",
+    "type": "fixedLine",
+    "number": "2033123456"
+  },
+  {
+    "a2": "NG",
+    "countryCode": "234",
+    "type": "mobile",
+    "number": "8021234567"
+  },
+  {
+    "a2": "RE",
+    "countryCode": "262",
+    "type": "fixedLine",
+    "number": "262161234"
+  },
+  {
+    "a2": "RE",
+    "countryCode": "262",
+    "type": "mobile",
+    "number": "692123456"
+  },
+  {
+    "a2": "RW",
+    "countryCode": "250",
+    "type": "fixedLine",
+    "number": "250123456"
+  },
+  {
+    "a2": "RW",
+    "countryCode": "250",
+    "type": "mobile",
+    "number": "720123456"
+  },
+  {
+    "a2": "SC",
+    "countryCode": "248",
+    "type": "fixedLine",
+    "number": "4217123"
+  },
+  {
+    "a2": "SC",
+    "countryCode": "248",
+    "type": "mobile",
+    "number": "2510123"
+  },
+  {
+    "a2": "SD",
+    "countryCode": "249",
+    "type": "fixedLine",
+    "number": "153123456"
+  },
+  {
+    "a2": "SD",
+    "countryCode": "249",
+    "type": "mobile",
+    "number": "911231234"
+  },
+  {
+    "a2": "SH",
+    "countryCode": "290",
+    "type": "fixedLine",
+    "number": "22158"
+  },
+  {
+    "a2": "SH",
+    "countryCode": "290",
+    "type": "mobile",
+    "number": "51234"
+  },
+  {
+    "a2": "SL",
+    "countryCode": "232",
+    "type": "fixedLine",
+    "number": "22221234"
+  },
+  {
+    "a2": "SL",
+    "countryCode": "232",
+    "type": "mobile",
+    "number": "25123456"
+  },
+  {
+    "a2": "SN",
+    "countryCode": "221",
+    "type": "fixedLine",
+    "number": "301012345"
+  },
+  {
+    "a2": "SN",
+    "countryCode": "221",
+    "type": "mobile",
+    "number": "701234567"
+  },
+  {
+    "a2": "SO",
+    "countryCode": "252",
+    "type": "fixedLine",
+    "number": "4012345"
+  },
+  {
+    "a2": "SO",
+    "countryCode": "252",
+    "type": "mobile",
+    "number": "71123456"
+  },
+  {
+    "a2": "SS",
+    "countryCode": "211",
+    "type": "fixedLine",
+    "number": "181234567"
+  },
+  {
+    "a2": "SS",
+    "countryCode": "211",
+    "type": "mobile",
+    "number": "977123456"
+  },
+  {
+    "a2": "ST",
+    "countryCode": "239",
+    "type": "fixedLine",
+    "number": "2221234"
+  },
+  {
+    "a2": "ST",
+    "countryCode": "239",
+    "type": "mobile",
+    "number": "9812345"
+  },
+  {
+    "a2": "SZ",
+    "countryCode": "268",
+    "type": "fixedLine",
+    "number": "22171234"
+  },
+  {
+    "a2": "SZ",
+    "countryCode": "268",
+    "type": "mobile",
+    "number": "76123456"
+  },
+  {
+    "a2": "TD",
+    "countryCode": "235",
+    "type": "fixedLine",
+    "number": "22501234"
+  },
+  {
+    "a2": "TD",
+    "countryCode": "235",
+    "type": "mobile",
+    "number": "63012345"
+  },
+  {
+    "a2": "TG",
+    "countryCode": "228",
+    "type": "fixedLine",
+    "number": "22212345"
+  },
+  {
+    "a2": "TG",
+    "countryCode": "228",
+    "type": "mobile",
+    "number": "90112345"
+  },
+  {
+    "a2": "TN",
+    "countryCode": "216",
+    "type": "fixedLine",
+    "number": "30010123"
+  },
+  {
+    "a2": "TN",
+    "countryCode": "216",
+    "type": "mobile",
+    "number": "20123456"
+  },
+  {
+    "a2": "TZ",
+    "countryCode": "255",
+    "type": "fixedLine",
+    "number": "222345678"
+  },
+  {
+    "a2": "TZ",
+    "countryCode": "255",
+    "type": "mobile",
+    "number": "621234567"
+  },
+  {
+    "a2": "UG",
+    "countryCode": "256",
+    "type": "fixedLine",
+    "number": "312345678"
+  },
+  {
+    "a2": "UG",
+    "countryCode": "256",
+    "type": "mobile",
+    "number": "712345678"
+  },
+  {
+    "a2": "YT",
+    "countryCode": "262",
+    "type": "fixedLine",
+    "number": "269601234"
+  },
+  {
+    "a2": "YT",
+    "countryCode": "262",
+    "type": "mobile",
+    "number": "639012345"
+  },
+  {
+    "a2": "ZA",
+    "countryCode": "27",
+    "type": "fixedLine",
+    "number": "101234567"
+  },
+  {
+    "a2": "ZA",
+    "countryCode": "27",
+    "type": "mobile",
+    "number": "711234567"
+  },
+  {
+    "a2": "ZM",
+    "countryCode": "260",
+    "type": "fixedLine",
+    "number": "211234567"
+  },
+  {
+    "a2": "ZM",
+    "countryCode": "260",
+    "type": "mobile",
+    "number": "955123456"
+  },
+  {
+    "a2": "ZW",
+    "countryCode": "263",
+    "type": "fixedLine",
+    "number": "1312345"
+  },
+  {
+    "a2": "ZW",
+    "countryCode": "263",
+    "type": "mobile",
+    "number": "712345678"
+  }
+]

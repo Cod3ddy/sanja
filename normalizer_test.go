@@ -1,6 +1,8 @@
 package sanja
 
 import (
+	"encoding/json"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -533,7 +535,11 @@ func TestNormalizeAndValidate(t *testing.T) {
 		{name: "local number", defaultCountry: "MW", input: "0886392814", expected: "+265886392814"},
 		{name: "international number", defaultCountry: "MW", input: "+447911123456", expected: "+447911123456"},
 		{name: "international prefix", defaultCountry: "MW", input: "00447911123456", expected: "+447911123456"},
-		{name: "one digit short with plus", defaultCountry: "MW", input: "+2659912345", expectedErr: ErrInvalidPhoneNumber},
+		{name: "one digit short with plus", defaultCountry: "MW", input: "+26599123456", expectedErr: ErrInvalidPhoneNumber},
+		{name: "Malawi landline length", defaultCountry: "MW", input: "01234567", expected: "+2651234567"},
+		{name: "Malawi has no 8-digit numbers", defaultCountry: "MW", input: "+26512345678", expectedErr: ErrInvalidPhoneNumber},
+		{name: "Benin 10-digit number", defaultCountry: "BJ", input: "0195123456", expected: "+2290195123456"},
+		{name: "Benin has no 9-digit numbers", defaultCountry: "BJ", input: "+229019512345", expectedErr: ErrInvalidPhoneNumber},
 		{name: "one digit short local", defaultCountry: "MW", input: "099123456", expectedErr: ErrInvalidPhoneNumber},
 		{name: "one digit too many", defaultCountry: "MW", input: "+2658863928140", expectedErr: ErrInvalidPhoneNumber},
 		{name: "short number", defaultCountry: "MW", input: "123", expectedErr: ErrInvalidPhoneNumber},
@@ -592,5 +598,35 @@ func BenchmarkNormalizeBulk(b *testing.B) {
 	b.ResetTimer()
 	for b.Loop() {
 		norm.NormalizeBulk(phoneNumbers)
+	}
+}
+
+func TestLibphonenumberExamples(t *testing.T) {
+	data, err := os.ReadFile("testdata/libphonenumber_examples.json")
+	require.NoError(t, err)
+
+	var examples []struct {
+		A2          string `json:"a2"`
+		CountryCode string `json:"countryCode"`
+		Type        string `json:"type"`
+		Number      string `json:"number"`
+	}
+	err = json.Unmarshal(data, &examples)
+	require.NoError(t, err)
+	require.NotEmpty(t, examples)
+
+	for _, example := range examples {
+		t.Run(example.A2+" "+example.Type, func(t *testing.T) {
+			norm := mustNormalizer(t, example.A2)
+			expected := "+" + example.CountryCode + example.Number
+
+			local, err := norm.NormalizeAndValidate(norm.defaultCountry.NationalPrefix + example.Number)
+			require.NoError(t, err)
+			assert.Equal(t, expected, local)
+
+			international, err := norm.NormalizeAndValidate(expected)
+			require.NoError(t, err)
+			assert.Equal(t, expected, international)
+		})
 	}
 }

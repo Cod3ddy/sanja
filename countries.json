@@ -32,8 +32,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "(?:[1-4]|[5-79]\\d|80)\\d{7}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "American Samoa",
@@ -69,7 +73,10 @@
     "nationalPrefix": "",
     "numberPattern": "[29]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Anguilla",
@@ -274,7 +281,11 @@
     "nationalPrefix": "",
     "numberPattern": "(?:01\\d|8)\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      8,
+      10
+    ]
   },
   {
     "name": "Bermuda",
@@ -346,7 +357,12 @@
     "nationalPrefix": "",
     "numberPattern": "(?:0800|(?:[37]|800)\\d)\\d{6}|(?:[2-6]\\d|90)\\d{5}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      7,
+      8,
+      10
+    ]
   },
   {
     "name": "Bouvet Island",
@@ -382,7 +398,10 @@
     "nationalPrefix": "",
     "numberPattern": "3\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Brunei Darussalam",
@@ -418,7 +437,10 @@
     "nationalPrefix": "",
     "numberPattern": "[024-7]\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Burundi",
@@ -430,7 +452,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[267]\\d|31)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Cambodia",
@@ -453,8 +478,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "",
     "numberPattern": "[26]\\d{8}|88\\d{6,7}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Canada",
@@ -478,7 +507,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[2-59]\\d\\d|800)\\d{4}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Cayman Islands",
@@ -502,7 +534,10 @@
     "nationalPrefix": "",
     "numberPattern": "8776\\d{4}|(?:[27]\\d|61)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Chad",
@@ -514,7 +549,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:22|[3689]\\d|77)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Chile",
@@ -586,7 +624,10 @@
     "nationalPrefix": "",
     "numberPattern": "[3478]\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Congo",
@@ -598,7 +639,10 @@
     "nationalPrefix": "",
     "numberPattern": "222\\d{6}|(?:0\\d|80)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Democratic Republic of the Congo",
@@ -609,8 +653,14 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "(?:(?:[189]|5\\d)\\d|2)\\d{7}|[1-68]\\d{6}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      7,
+      8,
+      9,
+      10
+    ]
   },
   {
     "name": "Cook Islands",
@@ -707,7 +757,10 @@
     "nationalPrefix": "",
     "numberPattern": "[02]\\d{9}",
     "minLocalDigits": 10,
-    "maxLocalDigits": 10
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      10
+    ]
   },
   {
     "name": "Denmark",
@@ -731,7 +784,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:2\\d|77)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Dominica",
@@ -778,8 +834,13 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "[189]\\d{8,9}|[24-6]\\d{8}|[135]\\d{7}",
-    "minLocalDigits": 10,
-    "maxLocalDigits": 10
+    "minLocalDigits": 8,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      8,
+      9,
+      10
+    ]
   },
   {
     "name": "El Salvador",
@@ -803,7 +864,10 @@
     "nationalPrefix": "",
     "numberPattern": "222\\d{6}|(?:3\\d|55|[89]0)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Eritrea",
@@ -815,7 +879,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[178]\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Estonia",
@@ -839,7 +906,10 @@
     "nationalPrefix": "0",
     "numberPattern": "(?:11|[2-57-9]\\d)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Falkland Islands (Malvinas)",
@@ -949,7 +1019,11 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[067]\\d|11)\\d{6}|[2-7]\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      7,
+      8
+    ]
   },
   {
     "name": "Gambia",
@@ -961,7 +1035,11 @@
     "nationalPrefix": "",
     "numberPattern": "[48]\\d{8}|[2-9]\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      7,
+      9
+    ]
   },
   {
     "name": "Georgia",
@@ -996,8 +1074,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "[235]\\d{8}|800\\d{5,6}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Gibraltar",
@@ -1105,8 +1187,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "",
     "numberPattern": "722\\d{6}|(?:3|6\\d)\\d{7}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Guinea-Bissau",
@@ -1118,7 +1204,11 @@
     "nationalPrefix": "",
     "numberPattern": "[49]\\d{8}|4\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      7,
+      9
+    ]
   },
   {
     "name": "Guyana",
@@ -1382,8 +1472,14 @@
     "internationalPrefix": "000",
     "nationalPrefix": "0",
     "numberPattern": "(?:[17]\\d\\d|900)\\d{6}|(?:2|80)0\\d{6,7}|[4-6]\\d{6,8}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      7,
+      8,
+      9,
+      10
+    ]
   },
   {
     "name": "Kiribati",
@@ -1491,7 +1587,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[256]\\d\\d|800)\\d{5}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Liberia",
@@ -1503,7 +1602,12 @@
     "nationalPrefix": "0",
     "numberPattern": "(?:[2457]\\d|33|88)\\d{7}|(?:2\\d|[4-6])\\d{6}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      7,
+      8,
+      9
+    ]
   },
   {
     "name": "Libya",
@@ -1515,7 +1619,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[2-9]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 10
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Liechtenstein",
@@ -1587,7 +1694,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[23]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Malawi",
@@ -1598,8 +1708,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "(?:[1289]\\d|31|77)\\d{7}|1\\d{6}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 7,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      7,
+      9
+    ]
   },
   {
     "name": "Malaysia",
@@ -1635,7 +1749,10 @@
     "nationalPrefix": "",
     "numberPattern": "[24-9]\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Malta",
@@ -1683,7 +1800,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[2-4]\\d\\d|800)\\d{5}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Mauritius",
@@ -1694,8 +1814,13 @@
     "internationalPrefix": "0(?:0|[24-7]0|3[03])",
     "nationalPrefix": "",
     "numberPattern": "(?:[57]|8\\d\\d)\\d{7}|[2-468]\\d{6}",
-    "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      7,
+      8,
+      10
+    ]
   },
   {
     "name": "Mayotte",
@@ -1707,7 +1832,10 @@
     "nationalPrefix": "0",
     "numberPattern": "(?:639\\d|7093)\\d{5}|(?:26|80|9\\d)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Mexico",
@@ -1804,7 +1932,10 @@
     "numberPattern": "[5-8]\\d{8}",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Mozambique",
@@ -1815,8 +1946,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "",
     "numberPattern": "(?:2|8\\d)\\d{7}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Myanmar",
@@ -1839,8 +1974,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "[68]\\d{7,8}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Nauru",
@@ -1924,7 +2063,10 @@
     "nationalPrefix": "",
     "numberPattern": "[027-9]\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Nigeria",
@@ -1935,8 +2077,15 @@
     "internationalPrefix": "009",
     "nationalPrefix": "0",
     "numberPattern": "(?:20|9\\d)\\d{8}|[78]\\d{9,13}",
-    "minLocalDigits": 7,
-    "maxLocalDigits": 10
+    "minLocalDigits": 10,
+    "maxLocalDigits": 14,
+    "localDigitLengths": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
   },
   {
     "name": "Niue",
@@ -2190,8 +2339,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "(?:06|[27]\\d\\d|[89]00)\\d{6}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 8,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Reunion",
@@ -2204,7 +2357,10 @@
     "numberPattern": "709\\d{6}|(?:26|[689]\\d)\\d{7}",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Saint Barthelemy",
@@ -2229,7 +2385,11 @@
     "numberPattern": "(?:[256]\\d|8)\\d{3}",
     "mainCountryForCode": true,
     "minLocalDigits": 4,
-    "maxLocalDigits": 4
+    "maxLocalDigits": 5,
+    "localDigitLengths": [
+      4,
+      5
+    ]
   },
   {
     "name": "Saint Kitts and Nevis",
@@ -2325,7 +2485,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:22|9\\d)\\d{5}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Saudi Arabia",
@@ -2349,7 +2512,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[378]\\d|93)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Serbia",
@@ -2373,7 +2539,10 @@
     "nationalPrefix": "",
     "numberPattern": "(?:[2489]\\d|64)\\d{5}",
     "minLocalDigits": 7,
-    "maxLocalDigits": 7
+    "maxLocalDigits": 7,
+    "localDigitLengths": [
+      7
+    ]
   },
   {
     "name": "Sierra Leone",
@@ -2385,7 +2554,10 @@
     "nationalPrefix": "0",
     "numberPattern": "(?:[237-9]\\d|66)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Singapore",
@@ -2456,8 +2628,14 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "[346-9]\\d{8}|[12679]\\d{7}|[1-5]\\d{6}|[1348]\\d{5}",
-    "minLocalDigits": 8,
-    "maxLocalDigits": 9
+    "minLocalDigits": 6,
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      6,
+      7,
+      8,
+      9
+    ]
   },
   {
     "name": "South Africa",
@@ -2468,8 +2646,16 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "[1-79]\\d{8}|8\\d{4,9}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 5,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
   },
   {
     "name": "South Georgia and the South Sandwich Islands",
@@ -2493,7 +2679,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[19]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Spain",
@@ -2529,7 +2718,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[19]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Suriname",
@@ -2565,7 +2757,11 @@
     "nationalPrefix": "",
     "numberPattern": "0800\\d{4}|(?:[237]\\d|900)\\d{6}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      8,
+      9
+    ]
   },
   {
     "name": "Sweden",
@@ -2637,7 +2833,10 @@
     "nationalPrefix": "0",
     "numberPattern": "(?:[25-8]\\d|41|90)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Thailand",
@@ -2673,7 +2872,10 @@
     "nationalPrefix": "",
     "numberPattern": "[279]\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Tokelau",
@@ -2721,7 +2923,10 @@
     "nationalPrefix": "",
     "numberPattern": "[2-57-9]\\d{7}",
     "minLocalDigits": 8,
-    "maxLocalDigits": 8
+    "maxLocalDigits": 8,
+    "localDigitLengths": [
+      8
+    ]
   },
   {
     "name": "Turkey",
@@ -2781,7 +2986,10 @@
     "nationalPrefix": "0",
     "numberPattern": "800\\d{6}|(?:[29]0|[347]\\d)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Ukraine",
@@ -2951,7 +3159,10 @@
     "nationalPrefix": "0",
     "numberPattern": "[5-8]\\d{8}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Yemen",
@@ -2975,7 +3186,10 @@
     "nationalPrefix": "0",
     "numberPattern": "800\\d{6}|(?:21|[579]\\d|63)\\d{7}",
     "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "maxLocalDigits": 9,
+    "localDigitLengths": [
+      9
+    ]
   },
   {
     "name": "Zimbabwe",
@@ -2986,7 +3200,12 @@
     "internationalPrefix": "00",
     "nationalPrefix": "0",
     "numberPattern": "(?:13|8\\d{4})\\d{5}|[235-8]\\d{8}|[23568]\\d{6}",
-    "minLocalDigits": 9,
-    "maxLocalDigits": 9
+    "minLocalDigits": 7,
+    "maxLocalDigits": 10,
+    "localDigitLengths": [
+      7,
+      9,
+      10
+    ]
   }
 ]

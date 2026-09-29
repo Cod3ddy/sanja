@@ -146,8 +146,9 @@ These fields in `countries.json` come from Google’s libphonenumber metadata:
 - `nationalPrefix`: what callers dial before a number inside the country, such as `0` in Malawi or `8` in Russia. Some countries, like Italy and Côte d’Ivoire, have none: their leading `0` is part of the number
 - `numberPattern`: the shape of a valid number, used to tell a leading `0` or `8` that belongs to the number from one that doesn’t
 - `mainCountryForCode`: which country to use when several share a dialling code
+- `minLocalDigits`, `maxLocalDigits` and `localDigitLengths`, for African countries only so far: how many digits can follow the dialling code. Malawi, for example, has 7-digit landlines and 9-digit mobiles, so `localDigitLengths` is `[7, 9]` and an 8-digit number is rejected. These cover every kind of number libphonenumber lists, including toll-free and premium-rate lines, so a real number is never rejected for its length
 
-To refresh them, pin the libphonenumber release in `internal/cmd/gencountries/main.go` and run this from the repository root:
+To refresh them, pin the libphonenumber release in `internal/cmd/gencountries/main.go` and run this from the repository root. It also rewrites `testdata/libphonenumber_examples.json`, libphonenumber’s example landline and mobile number for each of those African countries, which the tests check:
 
 ```bash
 go run ./internal/cmd/gencountries
@@ -172,6 +173,7 @@ type Country struct {
     MainCountryForCode  bool   // True for the country returned when several share a dialing code
     MinLocalDigits      int    // Fewest digits after the dialing code
     MaxLocalDigits      int    // Most digits after the dialing code
+    LocalDigitLengths   []int  // Every allowed digit count after the dialing code, when known (e.g., [7, 9])
 }
 
 type Normalizer struct {
