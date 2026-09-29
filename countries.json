@@ -5,6 +5,7 @@
     "a3": "AFG",
     "numCode": 4,
     "dialingCode": "93",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -14,6 +15,7 @@
     "a3": "ALB",
     "numCode": 8,
     "dialingCode": "355",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -23,6 +25,7 @@
     "a3": "DZA",
     "numCode": 12,
     "dialingCode": "213",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -32,6 +35,7 @@
     "a3": "ASM",
     "numCode": 16,
     "dialingCode": "1-684",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -41,6 +45,7 @@
     "a3": "AND",
     "numCode": 20,
     "dialingCode": "376",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 9
   },
@@ -50,6 +55,7 @@
     "a3": "AGO",
     "numCode": 24,
     "dialingCode": "244",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -59,6 +65,7 @@
     "a3": "AIA",
     "numCode": 660,
     "dialingCode": "1-264",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -68,6 +75,7 @@
     "a3": "ATA",
     "numCode": 10,
     "dialingCode": "672",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 12
   },
@@ -77,6 +85,7 @@
     "a3": "ATG",
     "numCode": 28,
     "dialingCode": "1-268",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -86,6 +95,7 @@
     "a3": "ARG",
     "numCode": 32,
     "dialingCode": "54",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 11
   },
@@ -95,6 +105,7 @@
     "a3": "ARM",
     "numCode": 51,
     "dialingCode": "374",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -104,6 +115,7 @@
     "a3": "ABW",
     "numCode": 533,
     "dialingCode": "297",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -113,6 +125,7 @@
     "a3": "AUS",
     "numCode": 36,
     "dialingCode": "61",
+    "internationalPrefix": "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
@@ -123,6 +136,7 @@
     "a3": "AUT",
     "numCode": 40,
     "dialingCode": "43",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 13
   },
@@ -132,6 +146,7 @@
     "a3": "AZE",
     "numCode": 31,
     "dialingCode": "994",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -141,6 +156,7 @@
     "a3": "BHS",
     "numCode": 44,
     "dialingCode": "1-242",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -150,6 +166,7 @@
     "a3": "BHR",
     "numCode": 48,
     "dialingCode": "973",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -159,6 +176,7 @@
     "a3": "BGD",
     "numCode": 50,
     "dialingCode": "880",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -168,6 +186,7 @@
     "a3": "BRB",
     "numCode": 52,
     "dialingCode": "1-246",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -177,6 +196,7 @@
     "a3": "BLR",
     "numCode": 112,
     "dialingCode": "375",
+    "internationalPrefix": "810",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -186,6 +206,7 @@
     "a3": "BEL",
     "numCode": 56,
     "dialingCode": "32",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -195,6 +216,7 @@
     "a3": "BLZ",
     "numCode": 84,
     "dialingCode": "501",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -204,6 +226,7 @@
     "a3": "BEN",
     "numCode": 204,
     "dialingCode": "229",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -213,6 +236,7 @@
     "a3": "BMU",
     "numCode": 60,
     "dialingCode": "1-441",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -222,6 +246,7 @@
     "a3": "BTN",
     "numCode": 64,
     "dialingCode": "975",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -231,6 +256,7 @@
     "a3": "BOL",
     "numCode": 68,
     "dialingCode": "591",
+    "internationalPrefix": "00(?:1\\d)?",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -240,6 +266,7 @@
     "a3": "BES",
     "numCode": 535,
     "dialingCode": "599",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -249,6 +276,7 @@
     "a3": "BIH",
     "numCode": 70,
     "dialingCode": "387",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -258,6 +286,7 @@
     "a3": "BWA",
     "numCode": 72,
     "dialingCode": "267",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -267,6 +296,7 @@
     "a3": "BVT",
     "numCode": 74,
     "dialingCode": "47",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -276,6 +306,7 @@
     "a3": "BRA",
     "numCode": 76,
     "dialingCode": "55",
+    "internationalPrefix": "00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)",
     "minLocalDigits": 10,
     "maxLocalDigits": 11
   },
@@ -285,6 +316,7 @@
     "a3": "IOT",
     "numCode": 86,
     "dialingCode": "246",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -294,6 +326,7 @@
     "a3": "BRN",
     "numCode": 96,
     "dialingCode": "673",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -303,6 +336,7 @@
     "a3": "BGR",
     "numCode": 100,
     "dialingCode": "359",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -312,6 +346,7 @@
     "a3": "BFA",
     "numCode": 854,
     "dialingCode": "226",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -321,6 +356,7 @@
     "a3": "BDI",
     "numCode": 108,
     "dialingCode": "257",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -330,6 +366,7 @@
     "a3": "KHM",
     "numCode": 116,
     "dialingCode": "855",
+    "internationalPrefix": "00[14-9]",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -339,6 +376,7 @@
     "a3": "CMR",
     "numCode": 120,
     "dialingCode": "237",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -348,6 +386,7 @@
     "a3": "CAN",
     "numCode": 124,
     "dialingCode": "1",
+    "internationalPrefix": "011",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -357,6 +396,7 @@
     "a3": "CPV",
     "numCode": 132,
     "dialingCode": "238",
+    "internationalPrefix": "0",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -366,6 +406,7 @@
     "a3": "CYM",
     "numCode": 136,
     "dialingCode": "1-345",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -375,6 +416,7 @@
     "a3": "CAF",
     "numCode": 140,
     "dialingCode": "236",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -384,6 +426,7 @@
     "a3": "TCD",
     "numCode": 148,
     "dialingCode": "235",
+    "internationalPrefix": "00|16",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -393,6 +436,7 @@
     "a3": "CHL",
     "numCode": 152,
     "dialingCode": "56",
+    "internationalPrefix": "(?:0|1(?:1[0-69]|2[02-5]|5[13-58]|69|7[0167]|8[018]))0",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -402,6 +446,7 @@
     "a3": "CHN",
     "numCode": 156,
     "dialingCode": "86",
+    "internationalPrefix": "00|1(?:[12]\\d|79)\\d\\d00",
     "minLocalDigits": 11,
     "maxLocalDigits": 11
   },
@@ -411,6 +456,7 @@
     "a3": "CXR",
     "numCode": 162,
     "dialingCode": "61",
+    "internationalPrefix": "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -420,6 +466,7 @@
     "a3": "CCK",
     "numCode": 166,
     "dialingCode": "61",
+    "internationalPrefix": "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -429,6 +476,7 @@
     "a3": "COL",
     "numCode": 170,
     "dialingCode": "57",
+    "internationalPrefix": "00(?:4(?:[14]4|56)|[579])",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -438,6 +486,7 @@
     "a3": "COM",
     "numCode": 174,
     "dialingCode": "269",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -447,6 +496,7 @@
     "a3": "COG",
     "numCode": 178,
     "dialingCode": "242",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -456,6 +506,7 @@
     "a3": "COD",
     "numCode": 180,
     "dialingCode": "243",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -465,6 +516,7 @@
     "a3": "COK",
     "numCode": 184,
     "dialingCode": "682",
+    "internationalPrefix": "00",
     "minLocalDigits": 5,
     "maxLocalDigits": 8
   },
@@ -474,6 +526,7 @@
     "a3": "CRI",
     "numCode": 188,
     "dialingCode": "506",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -483,6 +536,7 @@
     "a3": "HRV",
     "numCode": 191,
     "dialingCode": "385",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -492,6 +546,7 @@
     "a3": "CUB",
     "numCode": 192,
     "dialingCode": "53",
+    "internationalPrefix": "119",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -501,6 +556,7 @@
     "a3": "CUW",
     "numCode": 531,
     "dialingCode": "599",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 7,
     "maxLocalDigits": 8
@@ -511,6 +567,7 @@
     "a3": "CYP",
     "numCode": 196,
     "dialingCode": "357",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -520,6 +577,7 @@
     "a3": "CZE",
     "numCode": 203,
     "dialingCode": "420",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -529,6 +587,7 @@
     "a3": "CIV",
     "numCode": 384,
     "dialingCode": "225",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -538,6 +597,7 @@
     "a3": "DNK",
     "numCode": 208,
     "dialingCode": "45",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -547,6 +607,7 @@
     "a3": "DJI",
     "numCode": 262,
     "dialingCode": "253",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -556,6 +617,7 @@
     "a3": "DMA",
     "numCode": 212,
     "dialingCode": "1-767",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -565,6 +627,7 @@
     "a3": "DOM",
     "numCode": 214,
     "dialingCode": "1-809,1-829,1-849",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -574,6 +637,7 @@
     "a3": "ECU",
     "numCode": 218,
     "dialingCode": "593",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -583,6 +647,7 @@
     "a3": "EGY",
     "numCode": 818,
     "dialingCode": "20",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -592,6 +657,7 @@
     "a3": "SLV",
     "numCode": 222,
     "dialingCode": "503",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -601,6 +667,7 @@
     "a3": "GNQ",
     "numCode": 226,
     "dialingCode": "240",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -610,6 +677,7 @@
     "a3": "ERI",
     "numCode": 232,
     "dialingCode": "291",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -619,6 +687,7 @@
     "a3": "EST",
     "numCode": 233,
     "dialingCode": "372",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -628,6 +697,7 @@
     "a3": "ETH",
     "numCode": 231,
     "dialingCode": "251",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -637,6 +707,7 @@
     "a3": "FLK",
     "numCode": 238,
     "dialingCode": "500",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 5,
     "maxLocalDigits": 5
@@ -647,6 +718,7 @@
     "a3": "FRO",
     "numCode": 234,
     "dialingCode": "298",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 6
   },
@@ -656,6 +728,7 @@
     "a3": "FJI",
     "numCode": 242,
     "dialingCode": "679",
+    "internationalPrefix": "0(?:0|52)",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -665,6 +738,7 @@
     "a3": "FIN",
     "numCode": 246,
     "dialingCode": "358",
+    "internationalPrefix": "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))",
     "minLocalDigits": 5,
     "maxLocalDigits": 12
   },
@@ -674,6 +748,7 @@
     "a3": "FRA",
     "numCode": 250,
     "dialingCode": "33",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -683,6 +758,7 @@
     "a3": "GUF",
     "numCode": 254,
     "dialingCode": "594",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -692,6 +768,7 @@
     "a3": "PYF",
     "numCode": 258,
     "dialingCode": "689",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -701,6 +778,7 @@
     "a3": "ATF",
     "numCode": 260,
     "dialingCode": "262",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -710,6 +788,7 @@
     "a3": "GAB",
     "numCode": 266,
     "dialingCode": "241",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -719,6 +798,7 @@
     "a3": "GMB",
     "numCode": 270,
     "dialingCode": "220",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -728,6 +808,7 @@
     "a3": "GEO",
     "numCode": 268,
     "dialingCode": "995",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -737,6 +818,7 @@
     "a3": "DEU",
     "numCode": 276,
     "dialingCode": "49",
+    "internationalPrefix": "00",
     "minLocalDigits": 3,
     "maxLocalDigits": 12
   },
@@ -746,6 +828,7 @@
     "a3": "GHA",
     "numCode": 288,
     "dialingCode": "233",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -755,6 +838,7 @@
     "a3": "GIB",
     "numCode": 292,
     "dialingCode": "350",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -764,6 +848,7 @@
     "a3": "GRC",
     "numCode": 300,
     "dialingCode": "30",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -773,6 +858,7 @@
     "a3": "GRL",
     "numCode": 304,
     "dialingCode": "299",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 6
   },
@@ -782,6 +868,7 @@
     "a3": "GRD",
     "numCode": 308,
     "dialingCode": "1-473",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -791,6 +878,7 @@
     "a3": "GLP",
     "numCode": 312,
     "dialingCode": "590",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
@@ -801,6 +889,7 @@
     "a3": "GUM",
     "numCode": 316,
     "dialingCode": "1-671",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -810,6 +899,7 @@
     "a3": "GTM",
     "numCode": 320,
     "dialingCode": "502",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -819,6 +909,7 @@
     "a3": "GGY",
     "numCode": 831,
     "dialingCode": "44",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -828,6 +919,7 @@
     "a3": "GIN",
     "numCode": 324,
     "dialingCode": "224",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -837,6 +929,7 @@
     "a3": "GNB",
     "numCode": 624,
     "dialingCode": "245",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -846,6 +939,7 @@
     "a3": "GUY",
     "numCode": 328,
     "dialingCode": "592",
+    "internationalPrefix": "001",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -855,6 +949,7 @@
     "a3": "HTI",
     "numCode": 332,
     "dialingCode": "509",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -864,6 +959,7 @@
     "a3": "HMD",
     "numCode": 334,
     "dialingCode": "672",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 12
   },
@@ -873,6 +969,7 @@
     "a3": "VAT",
     "numCode": 336,
     "dialingCode": "379",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -882,6 +979,7 @@
     "a3": "HND",
     "numCode": 340,
     "dialingCode": "504",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -891,6 +989,7 @@
     "a3": "HKG",
     "numCode": 344,
     "dialingCode": "852",
+    "internationalPrefix": "00(?:30|5[09]|[126-9]?)",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -900,6 +999,7 @@
     "a3": "HUN",
     "numCode": 348,
     "dialingCode": "36",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -909,6 +1009,7 @@
     "a3": "ISL",
     "numCode": 352,
     "dialingCode": "354",
+    "internationalPrefix": "00|1(?:0(?:01|[12]0)|100)",
     "minLocalDigits": 7,
     "maxLocalDigits": 9
   },
@@ -918,6 +1019,7 @@
     "a3": "IND",
     "numCode": 356,
     "dialingCode": "91",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -927,6 +1029,7 @@
     "a3": "IDN",
     "numCode": 360,
     "dialingCode": "62",
+    "internationalPrefix": "00[89]",
     "minLocalDigits": 7,
     "maxLocalDigits": 12
   },
@@ -936,6 +1039,7 @@
     "a3": "IRN",
     "numCode": 364,
     "dialingCode": "98",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -945,6 +1049,7 @@
     "a3": "IRQ",
     "numCode": 368,
     "dialingCode": "964",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -954,6 +1059,7 @@
     "a3": "IRL",
     "numCode": 372,
     "dialingCode": "353",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -963,6 +1069,7 @@
     "a3": "IMN",
     "numCode": 833,
     "dialingCode": "44",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -972,6 +1079,7 @@
     "a3": "ISR",
     "numCode": 376,
     "dialingCode": "972",
+    "internationalPrefix": "0(?:0|1(?:05|[2-9]))",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -981,6 +1089,7 @@
     "a3": "ITA",
     "numCode": 380,
     "dialingCode": "39",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 11
   },
@@ -990,6 +1099,7 @@
     "a3": "JAM",
     "numCode": 388,
     "dialingCode": "1-876",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -999,6 +1109,7 @@
     "a3": "JPN",
     "numCode": 392,
     "dialingCode": "81",
+    "internationalPrefix": "010",
     "minLocalDigits": 9,
     "maxLocalDigits": 11
   },
@@ -1008,6 +1119,7 @@
     "a3": "JEY",
     "numCode": 832,
     "dialingCode": "44",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1017,6 +1129,7 @@
     "a3": "JOR",
     "numCode": 400,
     "dialingCode": "962",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1026,6 +1139,7 @@
     "a3": "KAZ",
     "numCode": 398,
     "dialingCode": "7",
+    "internationalPrefix": "810",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1035,6 +1149,7 @@
     "a3": "KEN",
     "numCode": 404,
     "dialingCode": "254",
+    "internationalPrefix": "000",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1044,6 +1159,7 @@
     "a3": "KIR",
     "numCode": 296,
     "dialingCode": "686",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1053,6 +1169,7 @@
     "a3": "PRK",
     "numCode": 408,
     "dialingCode": "850",
+    "internationalPrefix": "00|99",
     "minLocalDigits": 8,
     "maxLocalDigits": 10
   },
@@ -1062,6 +1179,7 @@
     "a3": "KOR",
     "numCode": 410,
     "dialingCode": "82",
+    "internationalPrefix": "00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))",
     "minLocalDigits": 9,
     "maxLocalDigits": 11
   },
@@ -1071,6 +1189,7 @@
     "a3": "KWT",
     "numCode": 414,
     "dialingCode": "965",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1080,6 +1199,7 @@
     "a3": "KGZ",
     "numCode": 417,
     "dialingCode": "996",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1089,6 +1209,7 @@
     "a3": "LAO",
     "numCode": 418,
     "dialingCode": "856",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -1098,6 +1219,7 @@
     "a3": "LVA",
     "numCode": 428,
     "dialingCode": "371",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1107,6 +1229,7 @@
     "a3": "LBN",
     "numCode": 422,
     "dialingCode": "961",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -1116,6 +1239,7 @@
     "a3": "LSO",
     "numCode": 426,
     "dialingCode": "266",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1125,6 +1249,7 @@
     "a3": "LBR",
     "numCode": 430,
     "dialingCode": "231",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -1134,6 +1259,7 @@
     "a3": "LBY",
     "numCode": 434,
     "dialingCode": "218",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 10
   },
@@ -1143,6 +1269,7 @@
     "a3": "LIE",
     "numCode": 438,
     "dialingCode": "423",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 9
   },
@@ -1152,6 +1279,7 @@
     "a3": "LTU",
     "numCode": 440,
     "dialingCode": "370",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1161,6 +1289,7 @@
     "a3": "LUX",
     "numCode": 442,
     "dialingCode": "352",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 9
   },
@@ -1170,6 +1299,7 @@
     "a3": "MAC",
     "numCode": 446,
     "dialingCode": "853",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1179,6 +1309,7 @@
     "a3": "MKD",
     "numCode": 807,
     "dialingCode": "389",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1188,6 +1319,7 @@
     "a3": "MDG",
     "numCode": 450,
     "dialingCode": "261",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1197,6 +1329,7 @@
     "a3": "MWI",
     "numCode": 454,
     "dialingCode": "265",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1206,6 +1339,7 @@
     "a3": "MYS",
     "numCode": 458,
     "dialingCode": "60",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 10
   },
@@ -1215,6 +1349,7 @@
     "a3": "MDV",
     "numCode": 462,
     "dialingCode": "960",
+    "internationalPrefix": "0(?:0|19)",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1224,6 +1359,7 @@
     "a3": "MLI",
     "numCode": 466,
     "dialingCode": "223",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1233,6 +1369,7 @@
     "a3": "MLT",
     "numCode": 470,
     "dialingCode": "356",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1242,6 +1379,7 @@
     "a3": "MHL",
     "numCode": 584,
     "dialingCode": "692",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1251,6 +1389,7 @@
     "a3": "MTQ",
     "numCode": 474,
     "dialingCode": "596",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1260,6 +1399,7 @@
     "a3": "MRT",
     "numCode": 478,
     "dialingCode": "222",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1269,6 +1409,7 @@
     "a3": "MUS",
     "numCode": 480,
     "dialingCode": "230",
+    "internationalPrefix": "0(?:0|[24-7]0|3[03])",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1278,6 +1419,7 @@
     "a3": "MYT",
     "numCode": 175,
     "dialingCode": "262",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1287,6 +1429,7 @@
     "a3": "MEX",
     "numCode": 484,
     "dialingCode": "52",
+    "internationalPrefix": "0[09]",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1296,6 +1439,7 @@
     "a3": "FSM",
     "numCode": 583,
     "dialingCode": "691",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1305,6 +1449,7 @@
     "a3": "MDA",
     "numCode": 498,
     "dialingCode": "373",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1314,6 +1459,7 @@
     "a3": "MCO",
     "numCode": 492,
     "dialingCode": "377",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -1323,6 +1469,7 @@
     "a3": "MNG",
     "numCode": 496,
     "dialingCode": "976",
+    "internationalPrefix": "001",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1332,6 +1479,7 @@
     "a3": "MNE",
     "numCode": 499,
     "dialingCode": "382",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1341,6 +1489,7 @@
     "a3": "MSR",
     "numCode": 500,
     "dialingCode": "1-664",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1350,6 +1499,7 @@
     "a3": "MAR",
     "numCode": 504,
     "dialingCode": "212",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
@@ -1360,6 +1510,7 @@
     "a3": "MOZ",
     "numCode": 508,
     "dialingCode": "258",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1369,6 +1520,7 @@
     "a3": "MMR",
     "numCode": 104,
     "dialingCode": "95",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 10
   },
@@ -1378,6 +1530,7 @@
     "a3": "NAM",
     "numCode": 516,
     "dialingCode": "264",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1387,6 +1540,7 @@
     "a3": "NRU",
     "numCode": 520,
     "dialingCode": "674",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1396,6 +1550,7 @@
     "a3": "NPL",
     "numCode": 524,
     "dialingCode": "977",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1405,6 +1560,7 @@
     "a3": "NLD",
     "numCode": 528,
     "dialingCode": "31",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1414,6 +1570,7 @@
     "a3": "NCL",
     "numCode": 540,
     "dialingCode": "687",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 6
   },
@@ -1423,6 +1580,7 @@
     "a3": "NZL",
     "numCode": 554,
     "dialingCode": "64",
+    "internationalPrefix": "0(?:0|161)",
     "minLocalDigits": 8,
     "maxLocalDigits": 10
   },
@@ -1432,6 +1590,7 @@
     "a3": "NIC",
     "numCode": 558,
     "dialingCode": "505",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1441,6 +1600,7 @@
     "a3": "NER",
     "numCode": 562,
     "dialingCode": "227",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1450,6 +1610,7 @@
     "a3": "NGA",
     "numCode": 566,
     "dialingCode": "234",
+    "internationalPrefix": "009",
     "minLocalDigits": 7,
     "maxLocalDigits": 10
   },
@@ -1459,6 +1620,7 @@
     "a3": "NIU",
     "numCode": 570,
     "dialingCode": "683",
+    "internationalPrefix": "00",
     "minLocalDigits": 4,
     "maxLocalDigits": 7
   },
@@ -1468,6 +1630,7 @@
     "a3": "NFK",
     "numCode": 574,
     "dialingCode": "672",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 6,
     "maxLocalDigits": 12
@@ -1478,6 +1641,7 @@
     "a3": "MNP",
     "numCode": 580,
     "dialingCode": "1-670",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1487,6 +1651,7 @@
     "a3": "NOR",
     "numCode": 578,
     "dialingCode": "47",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 8,
     "maxLocalDigits": 8
@@ -1497,6 +1662,7 @@
     "a3": "OMN",
     "numCode": 512,
     "dialingCode": "968",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1506,6 +1672,7 @@
     "a3": "PAK",
     "numCode": 586,
     "dialingCode": "92",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1515,6 +1682,7 @@
     "a3": "PLW",
     "numCode": 585,
     "dialingCode": "680",
+    "internationalPrefix": "01[12]",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1524,6 +1692,7 @@
     "a3": "PSE",
     "numCode": 275,
     "dialingCode": "970",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1533,6 +1702,7 @@
     "a3": "PAN",
     "numCode": 591,
     "dialingCode": "507",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1542,6 +1712,7 @@
     "a3": "PNG",
     "numCode": 598,
     "dialingCode": "675",
+    "internationalPrefix": "00|140[1-3]",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -1551,6 +1722,7 @@
     "a3": "PRY",
     "numCode": 600,
     "dialingCode": "595",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1560,6 +1732,7 @@
     "a3": "PER",
     "numCode": 604,
     "dialingCode": "51",
+    "internationalPrefix": "00|19(?:1[124]|77|90)00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1569,6 +1742,7 @@
     "a3": "PHL",
     "numCode": 608,
     "dialingCode": "63",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1578,6 +1752,7 @@
     "a3": "PCN",
     "numCode": 612,
     "dialingCode": "870",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 12
   },
@@ -1587,6 +1762,7 @@
     "a3": "POL",
     "numCode": 616,
     "dialingCode": "48",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1596,6 +1772,7 @@
     "a3": "PRT",
     "numCode": 620,
     "dialingCode": "351",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1605,6 +1782,7 @@
     "a3": "PRI",
     "numCode": 630,
     "dialingCode": "1",
+    "internationalPrefix": "011",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1614,6 +1792,7 @@
     "a3": "QAT",
     "numCode": 634,
     "dialingCode": "974",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1623,6 +1802,7 @@
     "a3": "ROU",
     "numCode": 642,
     "dialingCode": "40",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1632,6 +1812,7 @@
     "a3": "RUS",
     "numCode": 643,
     "dialingCode": "7",
+    "internationalPrefix": "810",
     "mainCountryForCode": true,
     "minLocalDigits": 10,
     "maxLocalDigits": 10
@@ -1642,6 +1823,7 @@
     "a3": "RWA",
     "numCode": 646,
     "dialingCode": "250",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1651,6 +1833,7 @@
     "a3": "REU",
     "numCode": 638,
     "dialingCode": "262",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
@@ -1661,6 +1844,7 @@
     "a3": "BLM",
     "numCode": 652,
     "dialingCode": "590",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1670,6 +1854,7 @@
     "a3": "SHN",
     "numCode": 654,
     "dialingCode": "290",
+    "internationalPrefix": "00",
     "minLocalDigits": 4,
     "maxLocalDigits": 4
   },
@@ -1679,6 +1864,7 @@
     "a3": "KNA",
     "numCode": 659,
     "dialingCode": "1-869",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1688,6 +1874,7 @@
     "a3": "LCA",
     "numCode": 662,
     "dialingCode": "1-758",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1697,6 +1884,7 @@
     "a3": "MAF",
     "numCode": 663,
     "dialingCode": "590",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1706,6 +1894,7 @@
     "a3": "SPM",
     "numCode": 666,
     "dialingCode": "508",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 6
   },
@@ -1715,6 +1904,7 @@
     "a3": "VCT",
     "numCode": 670,
     "dialingCode": "1-784",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1724,6 +1914,7 @@
     "a3": "WSM",
     "numCode": 882,
     "dialingCode": "685",
+    "internationalPrefix": "0",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1733,6 +1924,7 @@
     "a3": "SMR",
     "numCode": 674,
     "dialingCode": "378",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 10
   },
@@ -1742,6 +1934,7 @@
     "a3": "STP",
     "numCode": 678,
     "dialingCode": "239",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1751,6 +1944,7 @@
     "a3": "SAU",
     "numCode": 682,
     "dialingCode": "966",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1760,6 +1954,7 @@
     "a3": "SEN",
     "numCode": 686,
     "dialingCode": "221",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1769,6 +1964,7 @@
     "a3": "SRB",
     "numCode": 688,
     "dialingCode": "381",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -1778,6 +1974,7 @@
     "a3": "SYC",
     "numCode": 690,
     "dialingCode": "248",
+    "internationalPrefix": "010|0[0-2]",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1787,6 +1984,7 @@
     "a3": "SLE",
     "numCode": 694,
     "dialingCode": "232",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1796,6 +1994,7 @@
     "a3": "SGP",
     "numCode": 702,
     "dialingCode": "65",
+    "internationalPrefix": "0[0-3]\\d",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1805,6 +2004,7 @@
     "a3": "SXM",
     "numCode": 534,
     "dialingCode": "1-721",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1814,6 +2014,7 @@
     "a3": "SVK",
     "numCode": 703,
     "dialingCode": "421",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1823,6 +2024,7 @@
     "a3": "SVN",
     "numCode": 705,
     "dialingCode": "386",
+    "internationalPrefix": "00|10(?:22|66|88|99)",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1832,6 +2034,7 @@
     "a3": "SLB",
     "numCode": 90,
     "dialingCode": "677",
+    "internationalPrefix": "0[01]",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -1841,6 +2044,7 @@
     "a3": "SOM",
     "numCode": 706,
     "dialingCode": "252",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -1850,6 +2054,7 @@
     "a3": "ZAF",
     "numCode": 710,
     "dialingCode": "27",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1859,6 +2064,7 @@
     "a3": "SGS",
     "numCode": 239,
     "dialingCode": "500",
+    "internationalPrefix": "00",
     "minLocalDigits": 5,
     "maxLocalDigits": 5
   },
@@ -1868,6 +2074,7 @@
     "a3": "SSD",
     "numCode": 728,
     "dialingCode": "211",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1877,6 +2084,7 @@
     "a3": "ESP",
     "numCode": 724,
     "dialingCode": "34",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1886,6 +2094,7 @@
     "a3": "LKA",
     "numCode": 144,
     "dialingCode": "94",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1895,6 +2104,7 @@
     "a3": "SDN",
     "numCode": 729,
     "dialingCode": "249",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1904,6 +2114,7 @@
     "a3": "SUR",
     "numCode": 740,
     "dialingCode": "597",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 7
   },
@@ -1913,6 +2124,7 @@
     "a3": "SJM",
     "numCode": 744,
     "dialingCode": "47",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1922,6 +2134,7 @@
     "a3": "SWZ",
     "numCode": 748,
     "dialingCode": "268",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1931,6 +2144,7 @@
     "a3": "SWE",
     "numCode": 752,
     "dialingCode": "46",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 10
   },
@@ -1940,6 +2154,7 @@
     "a3": "CHE",
     "numCode": 756,
     "dialingCode": "41",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1949,6 +2164,7 @@
     "a3": "SYR",
     "numCode": 760,
     "dialingCode": "963",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1958,6 +2174,7 @@
     "a3": "TWN",
     "numCode": 158,
     "dialingCode": "886",
+    "internationalPrefix": "0(?:0[25-79]|19)",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1967,6 +2184,7 @@
     "a3": "TJK",
     "numCode": 762,
     "dialingCode": "992",
+    "internationalPrefix": "810",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1976,6 +2194,7 @@
     "a3": "TZA",
     "numCode": 834,
     "dialingCode": "255",
+    "internationalPrefix": "00[056]",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1985,6 +2204,7 @@
     "a3": "THA",
     "numCode": 764,
     "dialingCode": "66",
+    "internationalPrefix": "00[1-9]",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1994,6 +2214,7 @@
     "a3": "TLS",
     "numCode": 626,
     "dialingCode": "670",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -2003,6 +2224,7 @@
     "a3": "TGO",
     "numCode": 768,
     "dialingCode": "228",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -2012,6 +2234,7 @@
     "a3": "TKL",
     "numCode": 772,
     "dialingCode": "690",
+    "internationalPrefix": "00",
     "minLocalDigits": 4,
     "maxLocalDigits": 4
   },
@@ -2021,6 +2244,7 @@
     "a3": "TON",
     "numCode": 776,
     "dialingCode": "676",
+    "internationalPrefix": "00",
     "minLocalDigits": 5,
     "maxLocalDigits": 7
   },
@@ -2030,6 +2254,7 @@
     "a3": "TTO",
     "numCode": 780,
     "dialingCode": "1-868",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -2039,6 +2264,7 @@
     "a3": "TUN",
     "numCode": 788,
     "dialingCode": "216",
+    "internationalPrefix": "00",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -2048,6 +2274,7 @@
     "a3": "TUR",
     "numCode": 792,
     "dialingCode": "90",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -2057,6 +2284,7 @@
     "a3": "TKM",
     "numCode": 795,
     "dialingCode": "993",
+    "internationalPrefix": "810",
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -2066,6 +2294,7 @@
     "a3": "TCA",
     "numCode": 796,
     "dialingCode": "1-649",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -2075,6 +2304,7 @@
     "a3": "TUV",
     "numCode": 798,
     "dialingCode": "688",
+    "internationalPrefix": "00",
     "minLocalDigits": 5,
     "maxLocalDigits": 7
   },
@@ -2084,6 +2314,7 @@
     "a3": "UGA",
     "numCode": 800,
     "dialingCode": "256",
+    "internationalPrefix": "00[057]",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2093,6 +2324,7 @@
     "a3": "UKR",
     "numCode": 804,
     "dialingCode": "380",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2102,6 +2334,7 @@
     "a3": "ARE",
     "numCode": 784,
     "dialingCode": "971",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2111,6 +2344,7 @@
     "a3": "GBR",
     "numCode": 826,
     "dialingCode": "44",
+    "internationalPrefix": "00",
     "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 10
@@ -2121,6 +2355,7 @@
     "a3": "USA",
     "numCode": 840,
     "dialingCode": "1",
+    "internationalPrefix": "011",
     "mainCountryForCode": true,
     "minLocalDigits": 10,
     "maxLocalDigits": 10
@@ -2131,6 +2366,7 @@
     "a3": "UMI",
     "numCode": 581,
     "dialingCode": "1",
+    "internationalPrefix": "011",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -2140,6 +2376,7 @@
     "a3": "URY",
     "numCode": 858,
     "dialingCode": "598",
+    "internationalPrefix": "0(?:0|1[3-9]\\d)",
     "minLocalDigits": 8,
     "maxLocalDigits": 9
   },
@@ -2149,6 +2386,7 @@
     "a3": "UZB",
     "numCode": 860,
     "dialingCode": "998",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2158,6 +2396,7 @@
     "a3": "VUT",
     "numCode": 548,
     "dialingCode": "678",
+    "internationalPrefix": "00",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -2167,6 +2406,7 @@
     "a3": "VEN",
     "numCode": 862,
     "dialingCode": "58",
+    "internationalPrefix": "00",
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -2176,6 +2416,7 @@
     "a3": "VNM",
     "numCode": 704,
     "dialingCode": "84",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 10
   },
@@ -2185,6 +2426,7 @@
     "a3": "VGB",
     "numCode": 92,
     "dialingCode": "1-284",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -2194,6 +2436,7 @@
     "a3": "VIR",
     "numCode": 850,
     "dialingCode": "1-340",
+    "internationalPrefix": "011",
     "minLocalDigits": 7,
     "maxLocalDigits": 7
   },
@@ -2203,6 +2446,7 @@
     "a3": "WLF",
     "numCode": 876,
     "dialingCode": "681",
+    "internationalPrefix": "00",
     "minLocalDigits": 6,
     "maxLocalDigits": 6
   },
@@ -2212,6 +2456,7 @@
     "a3": "ESH",
     "numCode": 732,
     "dialingCode": "212",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2221,6 +2466,7 @@
     "a3": "YEM",
     "numCode": 887,
     "dialingCode": "967",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2230,6 +2476,7 @@
     "a3": "ZMB",
     "numCode": 894,
     "dialingCode": "260",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2239,6 +2486,7 @@
     "a3": "ZWE",
     "numCode": 716,
     "dialingCode": "263",
+    "internationalPrefix": "00",
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   }

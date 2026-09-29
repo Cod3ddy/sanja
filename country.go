@@ -7,14 +7,15 @@ import (
 
 // Country represents a country with its dialing codes and E.164 digit constraints.
 type Country struct {
-	Name               string `json:"name"`
-	A2                 string `json:"a2"`
-	A3                 string `json:"a3"`
-	NumCode            int    `json:"numCode"`
-	DialingCode        string `json:"dialingCode"`
-	MainCountryForCode bool   `json:"mainCountryForCode"`
-	MinLocalDigits     int    `json:"minLocalDigits"`
-	MaxLocalDigits     int    `json:"maxLocalDigits"`
+	Name                string `json:"name"`
+	A2                  string `json:"a2"`
+	A3                  string `json:"a3"`
+	NumCode             int    `json:"numCode"`
+	DialingCode         string `json:"dialingCode"`
+	InternationalPrefix string `json:"internationalPrefix"`
+	MainCountryForCode  bool   `json:"mainCountryForCode"`
+	MinLocalDigits      int    `json:"minLocalDigits"`
+	MaxLocalDigits      int    `json:"maxLocalDigits"`
 }
 
 const longestDialingCodeDigits = 4

@@ -118,7 +118,7 @@ Sanja includes comprehensive country data for **250+ countries and territories**
 - **International dialing codes** (e.g., `1`, `44`, `265`)
 
 ### Data Source
-The country data used in this package was sourced from [Kaggle - Country 2ISO3UN Digit Code and Dialing Code](https://www.kaggle.com/datasets/migeruj/country-2iso3un-digit-code-and-dialing-code). The main country for each shared dialling code follows `mainCountryForCode` in Google’s [libphonenumber metadata](https://github.com/google/libphonenumber/blob/master/resources/PhoneNumberMetadata.xml).
+The country data used in this package was sourced from [Kaggle - Country 2ISO3UN Digit Code and Dialing Code](https://www.kaggle.com/datasets/migeruj/country-2iso3un-digit-code-and-dialing-code). The main country for each shared dialling code (`mainCountryForCode`) and the prefix each country dials to call abroad (`internationalPrefix`) come from Google’s [libphonenumber metadata](https://github.com/google/libphonenumber/blob/master/resources/PhoneNumberMetadata.xml).
 
 ## API Reference
 
@@ -126,14 +126,15 @@ The country data used in this package was sourced from [Kaggle - Country 2ISO3UN
 
 ```go
 type Country struct {
-    Name               string
-    A2                 string // ISO Alpha-2 code (e.g., "US")
-    A3                 string // ISO Alpha-3 code (e.g., "USA")
-    NumCode            int    // ISO Numeric code (e.g., 840)
-    DialingCode        string // International dialing code (e.g., "1"), or several separated by commas
-    MainCountryForCode bool   // True for the country returned when several share a dialing code
-    MinLocalDigits     int    // Fewest digits after the dialing code
-    MaxLocalDigits     int    // Most digits after the dialing code
+    Name                string
+    A2                  string // ISO Alpha-2 code (e.g., "US")
+    A3                  string // ISO Alpha-3 code (e.g., "USA")
+    NumCode             int    // ISO Numeric code (e.g., 840)
+    DialingCode         string // International dialing code (e.g., "1"), or several separated by commas
+    InternationalPrefix string // Pattern for what callers dial before a foreign number (e.g., "00", "011")
+    MainCountryForCode  bool   // True for the country returned when several share a dialing code
+    MinLocalDigits      int    // Fewest digits after the dialing code
+    MaxLocalDigits      int    // Most digits after the dialing code
 }
 
 type Normalizer struct {
@@ -157,6 +158,11 @@ norm.Normalize("4151234567") // → "+14151234567"
 // With Malawi as default  
 norm := sanja.NewNormalizer("MW")
 norm.Normalize("886392814") // → "+265886392814"
+
+// The default country's prefix for calling abroad works like "+"
+norm.Normalize("00447911123456") // → "+447911123456" (Malawi dials 00)
+usNorm := sanja.NewNormalizer("US")
+usNorm.Normalize("011265886392814") // → "+265886392814" (the US dials 011)
 ```
 
 ## Error Handling

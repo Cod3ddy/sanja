@@ -109,6 +109,43 @@ func TestNormalize_PlusSign(t *testing.T) {
 	}
 }
 
+func TestNormalize_InternationalPrefix(t *testing.T) {
+	testCases := []struct {
+		name           string
+		defaultCountry string
+		input          string
+		expected       string
+	}{
+		{name: "00 to own country", defaultCountry: "MW", input: "00265886392814", expected: "+265886392814"},
+		{name: "00 to another country", defaultCountry: "MW", input: "00447911123456", expected: "+447911123456"},
+		{name: "00 with spaces", defaultCountry: "MW", input: "00 44 7911 123456", expected: "+447911123456"},
+		{name: "011 from the US", defaultCountry: "US", input: "011265886392814", expected: "+265886392814"},
+		{name: "00 is not international in the US", defaultCountry: "US", input: "002025551234", expected: "+12025551234"},
+		{name: "0011 from Australia", defaultCountry: "AU", input: "0011265886392814", expected: "+265886392814"},
+		{name: "010 from Japan", defaultCountry: "JP", input: "010265886392814", expected: "+265886392814"},
+		{name: "810 from Russia", defaultCountry: "RU", input: "810265886392814", expected: "+265886392814"},
+		{name: "00 with carrier code from Brazil", defaultCountry: "BR", input: "0021265886392814", expected: "+265886392814"},
+		{name: "prefix followed by zero stays local", defaultCountry: "MW", input: "000886392814", expected: "+265886392814"},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			norm := mustNormalizer(t, tc.defaultCountry)
+
+			result, err := norm.Normalize(tc.input)
+			require.NoError(t, err)
+			assert.Equal(t, tc.expected, result)
+		})
+	}
+}
+
+func TestInternationalPrefixesCompile(t *testing.T) {
+	for _, country := range getCountries() {
+		_, err := compileInternationalPrefix(country.InternationalPrefix)
+		assert.NoError(t, err, country.A2)
+	}
+}
+
 func TestCountryForNumber_PlusSign(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 
@@ -138,7 +175,7 @@ func TestNormalizeBulk(t *testing.T) {
 				"0886392814",
 				"265886392814",
 				"+265886392814",
-				"00886392814",
+				"00265886392814",
 				"",
 				"123",
 				"+447911123456",
