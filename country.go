@@ -3,6 +3,7 @@ package sanja
 import (
 	"fmt"
 	"regexp"
+	"slices"
 	"strings"
 )
 
@@ -19,6 +20,7 @@ type Country struct {
 	MainCountryForCode  bool   `json:"mainCountryForCode"`
 	MinLocalDigits      int    `json:"minLocalDigits"`
 	MaxLocalDigits      int    `json:"maxLocalDigits"`
+	LocalDigitLengths   []int  `json:"localDigitLengths"`
 
 	internationalPrefixPattern *regexp.Regexp
 	numberPattern              *regexp.Regexp
@@ -93,6 +95,11 @@ func checkLocalDigits(e164 string, country *Country) error {
 	if len(local) > country.MaxLocalDigits {
 		return fmt.Errorf("%w: %s allows at most %d local digits, got %d",
 			ErrInvalidPhoneNumber, country.Name, country.MaxLocalDigits, len(local))
+	}
+
+	if len(country.LocalDigitLengths) > 0 && !slices.Contains(country.LocalDigitLengths, len(local)) {
+		return fmt.Errorf("%w: %s allows only %v local digits, got %d",
+			ErrInvalidPhoneNumber, country.Name, country.LocalDigitLengths, len(local))
 	}
 
 	return nil
