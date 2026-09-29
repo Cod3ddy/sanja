@@ -59,7 +59,8 @@ func TestNormalize(t *testing.T) {
 
 		{name: "empty string", input: "", expectError: true, errorIs: ErrInvalidPhoneNumber},
 		{name: "only special characters", input: "+-() ", expectError: true, errorIs: ErrInvalidPhoneNumber},
-		{name: "too short number", input: "123", expectError: true, errorIs: ErrInvalidPhoneNumber},
+		{name: "only zeros", input: "0000", expectError: true, errorIs: ErrInvalidPhoneNumber},
+		{name: "short number is formatted, not checked", input: "123", expected: "+265123"},
 		{name: "exceeds E.164 max", input: "08863928149999999", expectError: true, errorIs: ErrPhoneNumberTooLong},
 	}
 
@@ -177,7 +178,7 @@ func TestNormalizeBulk(t *testing.T) {
 				"+265886392814",
 				"00265886392814",
 				"",
-				"123",
+				"0000",
 				"+447911123456",
 			},
 			errorCount: 2,
@@ -209,7 +210,7 @@ func TestNormalizeBulk(t *testing.T) {
 		},
 		{
 			name:           "all invalid numbers",
-			input:          []string{"", "abc", "123"},
+			input:          []string{"", "abc", "0000"},
 			errorCount:     3,
 			expectedOutput: []string{"", "", ""},
 		},
@@ -452,6 +453,48 @@ func TestValidatePhoneNumber(t *testing.T) {
 			} else {
 				assert.NoError(t, err)
 			}
+		})
+	}
+}
+
+func TestNormalizeAndValidate(t *testing.T) {
+	testCases := []struct {
+		name           string
+		defaultCountry string
+		input          string
+		expected       string
+		expectedErr    error
+	}{
+		{name: "local number", defaultCountry: "MW", input: "0886392814", expected: "+265886392814"},
+		{name: "international number", defaultCountry: "MW", input: "+447911123456", expected: "+447911123456"},
+		{name: "international prefix", defaultCountry: "MW", input: "00447911123456", expected: "+447911123456"},
+		{name: "one digit short with plus", defaultCountry: "MW", input: "+2659912345", expectedErr: ErrInvalidPhoneNumber},
+		{name: "one digit short local", defaultCountry: "MW", input: "099123456", expectedErr: ErrInvalidPhoneNumber},
+		{name: "one digit too many", defaultCountry: "MW", input: "+2658863928140", expectedErr: ErrInvalidPhoneNumber},
+		{name: "short number", defaultCountry: "MW", input: "123", expectedErr: ErrInvalidPhoneNumber},
+		{name: "other country too short", defaultCountry: "MW", input: "+4479111", expectedErr: ErrInvalidPhoneNumber},
+		{name: "unassigned code", defaultCountry: "MW", input: "+80812345678", expectedErr: ErrUnknownCountry},
+		{name: "over the E.164 cap", defaultCountry: "MW", input: "+2658863928149999", expectedErr: ErrPhoneNumberTooLong},
+		{name: "Germany allows 3 local digits", defaultCountry: "DE", input: "+49301", expected: "+49301"},
+		{name: "Finland allows 5 local digits", defaultCountry: "FI", input: "+35891234", expected: "+35891234"},
+		{name: "Niue allows 4 local digits", defaultCountry: "MW", input: "+6834002", expected: "+6834002"},
+		{name: "Austria allows 13 local digits", defaultCountry: "AT", input: "01234567890123", expected: "+431234567890123"},
+		{name: "shared code checked against the default country", defaultCountry: "KZ", input: "+77011234567", expected: "+77011234567"},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			norm := mustNormalizer(t, tc.defaultCountry)
+
+			result, err := norm.NormalizeAndValidate(tc.input)
+			if tc.expectedErr != nil {
+				assert.ErrorIs(t, err, tc.expectedErr)
+				assert.Empty(t, result)
+				return
+			}
+
+			require.NoError(t, err)
+			assert.Equal(t, tc.expected, result)
 		})
 	}
 }

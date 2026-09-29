@@ -108,3 +108,33 @@ func (n *Normalizer) ValidatePhoneNumber(phone, countryA2 string) error {
 
 	return nil
 }
+
+func checkLocalDigits(e164 string, country *Country) error {
+	local, ok := localDigits(e164, country)
+	if !ok {
+		return fmt.Errorf("%w: expected code for %s", ErrPhoneNumberAndCountryCodeMismatch, country.Name)
+	}
+
+	if len(local) < country.MinLocalDigits {
+		return fmt.Errorf("%w: %s requires at least %d local digits, got %d",
+			ErrInvalidPhoneNumber, country.Name, country.MinLocalDigits, len(local))
+	}
+
+	if len(local) > country.MaxLocalDigits {
+		return fmt.Errorf("%w: %s allows at most %d local digits, got %d",
+			ErrInvalidPhoneNumber, country.Name, country.MaxLocalDigits, len(local))
+	}
+
+	return nil
+}
+
+func localDigits(e164 string, country *Country) (string, bool) {
+	digits := strings.TrimPrefix(e164, "+")
+	for _, code := range splitDialingCodes(country.DialingCode) {
+		if local, found := strings.CutPrefix(digits, code); found {
+			return local, true
+		}
+	}
+
+	return "", false
+}
