@@ -46,7 +46,6 @@ func (n *Normalizer) ValidatePhoneNumber(phone, countryA2 string) error {
 		return ErrInvalidPhoneNumber
 	}
 
-	
 	var matchedCode string
 	for _, code := range splitDialingCodes(country.DialingCode) {
 		if strings.HasPrefix(cleaned, "+"+code) || strings.HasPrefix(cleaned, code) {
@@ -58,7 +57,6 @@ func (n *Normalizer) ValidatePhoneNumber(phone, countryA2 string) error {
 	if matchedCode == "" {
 		return fmt.Errorf("%w: expected code for %s", ErrPhoneNumberAndCountryCodeMismatch, country.Name)
 	}
-
 
 	withoutPlus := strings.TrimPrefix(cleaned, "+")
 	subscriber := withoutPlus[len(matchedCode):]

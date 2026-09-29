@@ -3,12 +3,15 @@ package sanja
 import (
 	_ "embed"
 	"encoding/json"
+	"sync"
 )
 
 //go:embed countries.json
 var countriesData []byte
 
-func getCountries() []Country {
+var getCountries = sync.OnceValue(parseCountries)
+
+func parseCountries() []Country {
 	var result []Country
 	if err := json.Unmarshal(countriesData, &result); err != nil {
 		panic("sanja: failed to parse countries data: " + err.Error())
