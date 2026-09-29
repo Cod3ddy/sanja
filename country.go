@@ -36,7 +36,12 @@ func (n *Normalizer) GetCountryByCode(code string) *Country {
 }
 
 func (n *Normalizer) CountryForNumber(e164 string) (*Country, error) {
-	digits, hasPlus := strings.CutPrefix(cleanPhone(e164), "+")
+	cleaned, err := cleanPhone(e164)
+	if err != nil {
+		return nil, err
+	}
+
+	digits, hasPlus := strings.CutPrefix(cleaned, "+")
 	if !hasPlus || digits == "" {
 		return nil, ErrInvalidPhoneNumber
 	}
@@ -59,7 +64,11 @@ func (n *Normalizer) ValidatePhoneNumber(phone, countryA2 string) error {
 		return fmt.Errorf("%w: %s", ErrUnknownCountry, countryA2)
 	}
 
-	cleaned := cleanPhone(phone)
+	cleaned, err := cleanPhone(phone)
+	if err != nil {
+		return err
+	}
+
 	if cleaned == "" {
 		return ErrInvalidPhoneNumber
 	}

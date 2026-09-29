@@ -79,6 +79,50 @@ func TestNormalize(t *testing.T) {
 	}
 }
 
+func TestNormalize_PlusSign(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	testCases := []struct {
+		name        string
+		input       string
+		expected    string
+		expectedErr error
+	}{
+		{name: "plus after spaces and brackets", input: " (+265) 88 639 2814", expected: "+265886392814"},
+		{name: "double plus", input: "++265886392814", expectedErr: ErrInvalidPhoneNumber},
+		{name: "plus in the middle", input: "+265+886392814", expectedErr: ErrInvalidPhoneNumber},
+		{name: "plus at the end", input: "0886392814+", expectedErr: ErrInvalidPhoneNumber},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			result, err := norm.Normalize(tc.input)
+			if tc.expectedErr != nil {
+				assert.ErrorIs(t, err, tc.expectedErr)
+				assert.Empty(t, result)
+				return
+			}
+
+			require.NoError(t, err)
+			assert.Equal(t, tc.expected, result)
+		})
+	}
+}
+
+func TestCountryForNumber_PlusSign(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	_, err := norm.CountryForNumber("+265+886392814")
+	assert.ErrorIs(t, err, ErrInvalidPhoneNumber)
+}
+
+func TestValidatePhoneNumber_PlusSign(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	err := norm.ValidatePhoneNumber("+265+99123456", "MW")
+	assert.ErrorIs(t, err, ErrInvalidPhoneNumber)
+}
+
 func TestNormalizeBulk(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 

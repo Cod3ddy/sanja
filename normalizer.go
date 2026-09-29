@@ -58,7 +58,10 @@ func NewNormalizer(defaultCountryA2 string) (*Normalizer, error) {
 // Returns ErrInvalidPhoneNumber for numbers that are too short,
 // and ErrPhoneNumberTooLong for numbers that exceed the E.164 15-digit cap.
 func (n *Normalizer) Normalize(phone string) (string, error) {
-	cleaned := cleanPhone(phone)
+	cleaned, err := cleanPhone(phone)
+	if err != nil {
+		return "", err
+	}
 
 	if strings.HasPrefix(cleaned, "+") {
 		digits := cleaned[1:]
