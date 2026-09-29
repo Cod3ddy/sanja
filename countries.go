@@ -24,6 +24,13 @@ func parseCountries() []Country {
 		}
 
 		result[i].internationalPrefixPattern = pattern
+
+		numberPattern, err := compileNumberPattern(result[i].NumberPattern)
+		if err != nil {
+			panic("sanja: number pattern for " + result[i].A2 + ": " + err.Error())
+		}
+
+		result[i].numberPattern = numberPattern
 	}
 
 	return result

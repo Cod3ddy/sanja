@@ -45,7 +45,7 @@ func TestNormalize(t *testing.T) {
 		{name: "local number without leading zero", input: "886392814", expected: "+265886392814"},
 		{name: "already normalized with plus", input: "+265886392814", expected: "+265886392814"},
 		{name: "number with country code without plus", input: "265886392814", expected: "+265886392814"},
-		{name: "number with multiple leading zeros", input: "000886392814", expected: "+265886392814"},
+		{name: "trunk prefix is stripped only once", input: "000886392814", expected: "+26500886392814"},
 		{name: "number with spaces", input: "088 639 2814", expected: "+265886392814"},
 		{name: "number with dashes", input: "088-639-2814", expected: "+265886392814"},
 		{name: "number with parentheses", input: "(088)6392814", expected: "+265886392814"},
@@ -59,7 +59,6 @@ func TestNormalize(t *testing.T) {
 
 		{name: "empty string", input: "", expectError: true, errorIs: ErrInvalidPhoneNumber},
 		{name: "only special characters", input: "+-() ", expectError: true, errorIs: ErrInvalidPhoneNumber},
-		{name: "only zeros", input: "0000", expectError: true, errorIs: ErrInvalidPhoneNumber},
 		{name: "short number is formatted, not checked", input: "123", expected: "+265123"},
 		{name: "local number starting with the country code", input: "265123456", expected: "+265265123456"},
 		{name: "exceeds E.164 max", input: "08863928149999999", expectError: true, errorIs: ErrPhoneNumberTooLong},
@@ -122,12 +121,12 @@ func TestNormalize_InternationalPrefix(t *testing.T) {
 		{name: "00 to another country", defaultCountry: "MW", input: "00447911123456", expected: "+447911123456"},
 		{name: "00 with spaces", defaultCountry: "MW", input: "00 44 7911 123456", expected: "+447911123456"},
 		{name: "011 from the US", defaultCountry: "US", input: "011265886392814", expected: "+265886392814"},
-		{name: "00 is not international in the US", defaultCountry: "US", input: "002025551234", expected: "+12025551234"},
+		{name: "00 is not international in the US", defaultCountry: "US", input: "002025551234", expected: "+1002025551234"},
 		{name: "0011 from Australia", defaultCountry: "AU", input: "0011265886392814", expected: "+265886392814"},
 		{name: "010 from Japan", defaultCountry: "JP", input: "010265886392814", expected: "+265886392814"},
 		{name: "810 from Russia", defaultCountry: "RU", input: "810265886392814", expected: "+265886392814"},
 		{name: "00 with carrier code from Brazil", defaultCountry: "BR", input: "0021265886392814", expected: "+265886392814"},
-		{name: "prefix followed by zero stays local", defaultCountry: "MW", input: "000886392814", expected: "+265886392814"},
+		{name: "prefix followed by zero stays local", defaultCountry: "MW", input: "000886392814", expected: "+26500886392814"},
 	}
 
 	for _, tc := range testCases {
@@ -162,6 +161,39 @@ func TestValidatePhoneNumber_PlusSign(t *testing.T) {
 	assert.ErrorIs(t, err, ErrInvalidPhoneNumber)
 }
 
+func TestNormalize_NationalPrefix(t *testing.T) {
+	testCases := []struct {
+		name           string
+		defaultCountry string
+		input          string
+		expected       string
+	}{
+		{name: "Malawi drops its 0", defaultCountry: "MW", input: "0886392814", expected: "+265886392814"},
+		{name: "Italy keeps the 0", defaultCountry: "IT", input: "0612345678", expected: "+390612345678"},
+		{name: "San Marino keeps the 0", defaultCountry: "SM", input: "0549886377", expected: "+3780549886377"},
+		{name: "Cote d'Ivoire keeps the 0", defaultCountry: "CI", input: "0707123456", expected: "+2250707123456"},
+		{name: "Congo keeps the 0", defaultCountry: "CG", input: "061234567", expected: "+242061234567"},
+		{name: "Gabon keeps the 0", defaultCountry: "GA", input: "06031234", expected: "+24106031234"},
+		{name: "Benin keeps the 0", defaultCountry: "BJ", input: "0195123456", expected: "+2290195123456"},
+		{name: "Hungary drops 06", defaultCountry: "HU", input: "0612345678", expected: "+3612345678"},
+		{name: "Russia drops 8", defaultCountry: "RU", input: "89161234567", expected: "+79161234567"},
+		{name: "Russia drops 8 before a toll-free number", defaultCountry: "RU", input: "88001234567", expected: "+78001234567"},
+		{name: "Russian toll-free number keeps its own 8", defaultCountry: "RU", input: "8001234567", expected: "+78001234567"},
+		{name: "Kazakhstan drops 8", defaultCountry: "KZ", input: "87710009998", expected: "+77710009998"},
+		{name: "Rwanda keeps the 0 of a 06 number", defaultCountry: "RW", input: "06123456", expected: "+25006123456"},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			norm := mustNormalizer(t, tc.defaultCountry)
+
+			result, err := norm.Normalize(tc.input)
+			require.NoError(t, err)
+			assert.Equal(t, tc.expected, result)
+		})
+	}
+}
+
 func TestNormalizeBulk(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 
@@ -179,7 +211,7 @@ func TestNormalizeBulk(t *testing.T) {
 				"+265886392814",
 				"00265886392814",
 				"",
-				"0000",
+				"+",
 				"+447911123456",
 			},
 			errorCount: 2,
@@ -211,7 +243,7 @@ func TestNormalizeBulk(t *testing.T) {
 		},
 		{
 			name:           "all invalid numbers",
-			input:          []string{"", "abc", "0000"},
+			input:          []string{"", "abc", "+"},
 			errorCount:     3,
 			expectedOutput: []string{"", "", ""},
 		},
@@ -505,6 +537,8 @@ func TestNormalizeAndValidate(t *testing.T) {
 		{name: "one digit short local", defaultCountry: "MW", input: "099123456", expectedErr: ErrInvalidPhoneNumber},
 		{name: "one digit too many", defaultCountry: "MW", input: "+2658863928140", expectedErr: ErrInvalidPhoneNumber},
 		{name: "short number", defaultCountry: "MW", input: "123", expectedErr: ErrInvalidPhoneNumber},
+		{name: "only zeros", defaultCountry: "MW", input: "0000", expectedErr: ErrInvalidPhoneNumber},
+		{name: "extra leading zeros", defaultCountry: "MW", input: "000886392814", expectedErr: ErrInvalidPhoneNumber},
 		{name: "other country too short", defaultCountry: "MW", input: "+4479111", expectedErr: ErrInvalidPhoneNumber},
 		{name: "unassigned code", defaultCountry: "MW", input: "+80812345678", expectedErr: ErrUnknownCountry},
 		{name: "over the E.164 cap", defaultCountry: "MW", input: "+2658863928149999", expectedErr: ErrPhoneNumberTooLong},

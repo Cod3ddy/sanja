@@ -14,11 +14,14 @@ type Country struct {
 	NumCode             int    `json:"numCode"`
 	DialingCode         string `json:"dialingCode"`
 	InternationalPrefix string `json:"internationalPrefix"`
+	NationalPrefix      string `json:"nationalPrefix"`
+	NumberPattern       string `json:"numberPattern"`
 	MainCountryForCode  bool   `json:"mainCountryForCode"`
 	MinLocalDigits      int    `json:"minLocalDigits"`
 	MaxLocalDigits      int    `json:"maxLocalDigits"`
 
 	internationalPrefixPattern *regexp.Regexp
+	numberPattern              *regexp.Regexp
 }
 
 const longestDialingCodeDigits = 4

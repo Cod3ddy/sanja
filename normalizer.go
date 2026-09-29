@@ -94,7 +94,7 @@ func normalize(phone string, defaultCountry *Country) (string, error) {
 	case hasCountryCode(cleaned, defaultCountry):
 		result = "+" + cleaned
 	default:
-		local := strings.TrimLeft(cleaned, "0")
+		local := stripNationalPrefix(cleaned, defaultCountry)
 		if local == "" {
 			return "", ErrInvalidPhoneNumber
 		}
@@ -163,4 +163,29 @@ func replaceInternationalPrefix(phone string, country *Country) string {
 	}
 
 	return "+" + rest
+}
+
+func compileNumberPattern(pattern string) (*regexp.Regexp, error) {
+	if pattern == "" {
+		return nil, nil
+	}
+
+	return regexp.Compile("^(?:" + pattern + ")$")
+}
+
+func stripNationalPrefix(phone string, country *Country) string {
+	local, found := strings.CutPrefix(phone, country.NationalPrefix)
+	if !found {
+		return phone
+	}
+
+	if matchesNumberPattern(phone, country) && !matchesNumberPattern(local, country) {
+		return phone
+	}
+
+	return local
+}
+
+func matchesNumberPattern(digits string, country *Country) bool {
+	return country.numberPattern != nil && country.numberPattern.MatchString(digits)
 }

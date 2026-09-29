@@ -167,6 +167,8 @@ type Country struct {
     NumCode             int    // ISO Numeric code (e.g., 840)
     DialingCode         string // International dialing code (e.g., "1"), or several separated by commas
     InternationalPrefix string // Pattern for what callers dial before a foreign number (e.g., "00", "011")
+    NationalPrefix      string // What callers dial before a number inside the country (e.g., "0"), or "" for none
+    NumberPattern       string // Pattern for a valid number without the dialing code
     MainCountryForCode  bool   // True for the country returned when several share a dialing code
     MinLocalDigits      int    // Fewest digits after the dialing code
     MaxLocalDigits      int    // Most digits after the dialing code
