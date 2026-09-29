@@ -99,7 +99,14 @@ fmt.Printf("Malawi dialing code: %s\n", country.DialingCode)
 country = norm.GetCountryByCode("44")
 fmt.Printf("Country with code 44: %s\n", country.Name)
 // Output: Country with code 44: United Kingdom
+
+// Get the country an international number belongs to
+country, err := norm.CountryForNumber("+16845551234")
+fmt.Printf("Country for +1 684 555 1234: %s\n", country.Name)
+// Output: Country for +1 684 555 1234: American Samoa
 ```
+
+Some dialling codes are shared by several countries, such as `1` (the United States, Canada and much of the Caribbean) and `7` (Russia and Kazakhstan). For those codes, `GetCountryByCode` and `CountryForNumber` return the main country, so `+1 416 555 1234` (Toronto) comes back as the United States.
 
 ## Supported Countries
 

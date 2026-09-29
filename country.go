@@ -17,6 +17,8 @@ type Country struct {
 	MaxLocalDigits     int    `json:"maxLocalDigits"`
 }
 
+const longestDialingCodeDigits = 4
+
 // GetCountryByA2 returns a country by its ISO 3166-1 alpha-2 code, or nil if not found.
 func (n *Normalizer) GetCountryByA2(a2 string) *Country {
 	for i := range n.countries {
@@ -31,6 +33,21 @@ func (n *Normalizer) GetCountryByA2(a2 string) *Country {
 // GetCountryByCode returns a country by its dialing code, or nil if not found.
 func (n *Normalizer) GetCountryByCode(code string) *Country {
 	return n.codeMap[code]
+}
+
+func (n *Normalizer) CountryForNumber(e164 string) (*Country, error) {
+	digits, hasPlus := strings.CutPrefix(cleanPhone(e164), "+")
+	if !hasPlus || digits == "" {
+		return nil, ErrInvalidPhoneNumber
+	}
+
+	for length := min(len(digits), longestDialingCodeDigits); length > 0; length-- {
+		if country := n.GetCountryByCode(digits[:length]); country != nil {
+			return country, nil
+		}
+	}
+
+	return nil, fmt.Errorf("%w: %s", ErrUnknownCountry, e164)
 }
 
 // ValidatePhoneNumber validates that phone is a valid E.164 number for the given country.

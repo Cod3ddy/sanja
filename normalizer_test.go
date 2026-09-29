@@ -258,6 +258,50 @@ func TestGetCountryByCode_SharedCodes(t *testing.T) {
 	}
 }
 
+func TestDialingCodesFitLongestDialingCodeDigits(t *testing.T) {
+	for _, country := range getCountries() {
+		for _, code := range splitDialingCodes(country.DialingCode) {
+			assert.LessOrEqual(t, len(code), longestDialingCodeDigits, country.A2)
+		}
+	}
+}
+
+func TestCountryForNumber(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	testCases := []struct {
+		name        string
+		phone       string
+		expected    string
+		expectedErr error
+	}{
+		{name: "three-digit code", phone: "+265991234567", expected: "MW"},
+		{name: "formatted number", phone: "+265 99 123 4567", expected: "MW"},
+		{name: "longer code wins over shared code", phone: "+16845551234", expected: "AS"},
+		{name: "second code of a multi-code country", phone: "+18295551234", expected: "DO"},
+		{name: "shared code gives main country", phone: "+12025551234", expected: "US"},
+		{name: "shared code 44", phone: "+447911123456", expected: "GB"},
+		{name: "no plus", phone: "265991234567", expectedErr: ErrInvalidPhoneNumber},
+		{name: "empty", phone: "", expectedErr: ErrInvalidPhoneNumber},
+		{name: "plus only", phone: "+", expectedErr: ErrInvalidPhoneNumber},
+		{name: "unassigned code", phone: "+8081234567", expectedErr: ErrUnknownCountry},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			c, err := norm.CountryForNumber(tc.phone)
+			if tc.expectedErr != nil {
+				assert.ErrorIs(t, err, tc.expectedErr)
+				assert.Nil(t, c)
+				return
+			}
+
+			require.NoError(t, err)
+			assert.Equal(t, tc.expected, c.A2)
+		})
+	}
+}
+
 func TestValidatePhoneNumber(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 
