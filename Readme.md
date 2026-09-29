@@ -138,6 +138,23 @@ Sanja includes comprehensive country data for **250+ countries and territories**
 ### Data Source
 The country data used in this package was sourced from [Kaggle - Country 2ISO3UN Digit Code and Dialing Code](https://www.kaggle.com/datasets/migeruj/country-2iso3un-digit-code-and-dialing-code). The main country for each shared dialling code (`mainCountryForCode`) and the prefix each country dials to call abroad (`internationalPrefix`) come from Google’s [libphonenumber metadata](https://github.com/google/libphonenumber/blob/master/resources/PhoneNumberMetadata.xml).
 
+### Updating country data
+
+These fields in `countries.json` come from Google’s libphonenumber metadata:
+
+- `internationalPrefix`: what callers dial before a foreign number, such as `00` or `011`
+- `nationalPrefix`: what callers dial before a number inside the country, such as `0` in Malawi or `8` in Russia. Some countries, like Italy and Côte d’Ivoire, have none: their leading `0` is part of the number
+- `numberPattern`: the shape of a valid number, used to tell a leading `0` or `8` that belongs to the number from one that doesn’t
+- `mainCountryForCode`: which country to use when several share a dialling code
+
+To refresh them, pin the libphonenumber release in `internal/cmd/gencountries/main.go` and run this from the repository root:
+
+```bash
+go run ./internal/cmd/gencountries
+```
+
+Countries libphonenumber doesn’t list keep their current values, and the command prints their codes.
+
 ## API Reference
 
 ### Types
