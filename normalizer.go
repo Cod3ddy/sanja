@@ -32,7 +32,9 @@ func NewNormalizer(defaultCountryA2 string) (*Normalizer, error) {
 	for i := range n.countries {
 		country := &n.countries[i]
 		for _, code := range splitDialingCodes(country.DialingCode) {
-			n.codeMap[code] = country
+			if _, taken := n.codeMap[code]; !taken || country.MainCountryForCode {
+				n.codeMap[code] = country
+			}
 		}
 	}
 

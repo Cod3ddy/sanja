@@ -229,6 +229,35 @@ func TestGetCountryByCode(t *testing.T) {
 	})
 }
 
+func TestGetCountryByCode_SharedCodes(t *testing.T) {
+	norm := mustNormalizer(t, "MW")
+
+	testCases := []struct {
+		code     string
+		expected string
+	}{
+		{code: "1", expected: "US"},
+		{code: "7", expected: "RU"},
+		{code: "44", expected: "GB"},
+		{code: "47", expected: "NO"},
+		{code: "61", expected: "AU"},
+		{code: "212", expected: "MA"},
+		{code: "262", expected: "RE"},
+		{code: "500", expected: "FK"},
+		{code: "590", expected: "GP"},
+		{code: "599", expected: "CW"},
+		{code: "672", expected: "NF"},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.code, func(t *testing.T) {
+			c := norm.GetCountryByCode(tc.code)
+			require.NotNil(t, c)
+			assert.Equal(t, tc.expected, c.A2)
+		})
+	}
+}
+
 func TestValidatePhoneNumber(t *testing.T) {
 	norm := mustNormalizer(t, "MW")
 

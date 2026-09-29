@@ -113,6 +113,7 @@
     "a3": "AUS",
     "numCode": 36,
     "dialingCode": "61",
+    "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -500,6 +501,7 @@
     "a3": "CUW",
     "numCode": 531,
     "dialingCode": "599",
+    "mainCountryForCode": true,
     "minLocalDigits": 7,
     "maxLocalDigits": 8
   },
@@ -635,6 +637,7 @@
     "a3": "FLK",
     "numCode": 238,
     "dialingCode": "500",
+    "mainCountryForCode": true,
     "minLocalDigits": 5,
     "maxLocalDigits": 5
   },
@@ -788,6 +791,7 @@
     "a3": "GLP",
     "numCode": 312,
     "dialingCode": "590",
+    "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1346,6 +1350,7 @@
     "a3": "MAR",
     "numCode": 504,
     "dialingCode": "212",
+    "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -1463,6 +1468,7 @@
     "a3": "NFK",
     "numCode": 574,
     "dialingCode": "672",
+    "mainCountryForCode": true,
     "minLocalDigits": 6,
     "maxLocalDigits": 12
   },
@@ -1481,6 +1487,7 @@
     "a3": "NOR",
     "numCode": 578,
     "dialingCode": "47",
+    "mainCountryForCode": true,
     "minLocalDigits": 8,
     "maxLocalDigits": 8
   },
@@ -1625,6 +1632,7 @@
     "a3": "RUS",
     "numCode": 643,
     "dialingCode": "7",
+    "mainCountryForCode": true,
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
@@ -1643,6 +1651,7 @@
     "a3": "REU",
     "numCode": 638,
     "dialingCode": "262",
+    "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 9
   },
@@ -2102,6 +2111,7 @@
     "a3": "GBR",
     "numCode": 826,
     "dialingCode": "44",
+    "mainCountryForCode": true,
     "minLocalDigits": 9,
     "maxLocalDigits": 10
   },
@@ -2111,6 +2121,7 @@
     "a3": "USA",
     "numCode": 840,
     "dialingCode": "1",
+    "mainCountryForCode": true,
     "minLocalDigits": 10,
     "maxLocalDigits": 10
   },
