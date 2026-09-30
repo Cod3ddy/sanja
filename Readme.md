@@ -30,8 +30,11 @@ import (
 
 func main() {
     // Create a normalizer with Malawi as default country
-    norm := sanja.NewNormalizer("MW")
-    
+    norm, err := sanja.NewNormalizer("MW")
+    if err != nil {
+        panic(err)
+    }
+
     // Normalize a local Malawian number
     normalized, err := norm.Normalize("0886392814")
     if err != nil {
@@ -47,31 +50,46 @@ func main() {
 ### Basic Normalization
 
 ```go
-norm := sanja.NewNormalizer("US")
+norm, _ := sanja.NewNormalizer("US")
 
 // Local number gets US country code
 normalized, _ := norm.Normalize("555-123-4567")
 // Result: +15551234567
 
 // Already international - unchanged
-normalized, _ := norm.Normalize("+442079460000")
+normalized, _ = norm.Normalize("+442079460000")
 // Result: +442079460000
 
-// Number with country code but no + prefix
-normalized, _ := norm.Normalize("265886392814")
-// Result: +265886392814
+// Number with the default country's code but no + prefix
+normalized, _ = norm.Normalize("12025550123")
+// Result: +12025550123
+```
+
+### Validation
+
+`Normalize` only formats a number. It does not check that the number has the right number of digits for its country. Use `NormalizeAndValidate` for both, or `ValidatePhoneNumber` to check a number against a country you name.
+
+```go
+norm, _ := sanja.NewNormalizer("MW")
+
+norm.Normalize("099123456")            // → "+26599123456", no error
+norm.NormalizeAndValidate("099123456") // error: Malawi requires at least 9 local digits, got 8
+norm.NormalizeAndValidate("+447911123456") // → "+447911123456", checked against the United Kingdom
+
+norm.ValidatePhoneNumber("0886392814", "MW")    // nil: local numbers are read as Malawian
+norm.ValidatePhoneNumber("+447911123456", "MW") // error: the number is not Malawian
 ```
 
 ### Bulk Processing
 
 ```go
-norm := sanja.NewNormalizer("MW")
+norm, _ := sanja.NewNormalizer("MW")
 
 phones := []string{
     "0886392814",
-    "265886392814", 
+    "265886392814",
     "+265886392814",
-    "00886392814",
+    "00265886392814",
 }
 
 results, errors := norm.NormalizeBulk(phones)
@@ -88,7 +106,7 @@ for i, phone := range results {
 ### Country Information
 
 ```go
-norm := sanja.NewNormalizer("US")
+norm, _ := sanja.NewNormalizer("US")
 
 // Get country by ISO A2 code
 country := norm.GetCountryByA2("MW")
@@ -99,7 +117,14 @@ fmt.Printf("Malawi dialing code: %s\n", country.DialingCode)
 country = norm.GetCountryByCode("44")
 fmt.Printf("Country with code 44: %s\n", country.Name)
 // Output: Country with code 44: United Kingdom
+
+// Get the country an international number belongs to
+country, err := norm.CountryForNumber("+16845551234")
+fmt.Printf("Country for +1 684 555 1234: %s\n", country.Name)
+// Output: Country for +1 684 555 1234: American Samoa
 ```
+
+Some dialling codes are shared by several countries, such as `1` (the United States, Canada and much of the Caribbean) and `7` (Russia and Kazakhstan). For those codes, `GetCountryByCode` and `CountryForNumber` return the main country, so `+1 416 555 1234` (Toronto) comes back as the United States.
 
 ## Supported Countries
 
@@ -111,7 +136,25 @@ Sanja includes comprehensive country data for **250+ countries and territories**
 - **International dialing codes** (e.g., `1`, `44`, `265`)
 
 ### Data Source
-The country data used in this package was sourced from [Kaggle - Country 2ISO3UN Digit Code and Dialing Code](https://www.kaggle.com/datasets/migeruj/country-2iso3un-digit-code-and-dialing-code).
+The country data used in this package was sourced from [Kaggle - Country 2ISO3UN Digit Code and Dialing Code](https://www.kaggle.com/datasets/migeruj/country-2iso3un-digit-code-and-dialing-code). The main country for each shared dialling code (`mainCountryForCode`) and the prefix each country dials to call abroad (`internationalPrefix`) come from Google’s [libphonenumber metadata](https://github.com/google/libphonenumber/blob/master/resources/PhoneNumberMetadata.xml).
+
+### Updating country data
+
+These fields in `countries.json` come from Google’s libphonenumber metadata:
+
+- `internationalPrefix`: what callers dial before a foreign number, such as `00` or `011`
+- `nationalPrefix`: what callers dial before a number inside the country, such as `0` in Malawi or `8` in Russia. Some countries, like Italy and Côte d’Ivoire, have none: their leading `0` is part of the number
+- `numberPattern`: the shape of a valid number, used to tell a leading `0` or `8` that belongs to the number from one that doesn’t
+- `mainCountryForCode`: which country to use when several share a dialling code
+- `minLocalDigits`, `maxLocalDigits` and `localDigitLengths`, for African countries only so far: how many digits can follow the dialling code. Malawi, for example, has 7-digit landlines and 9-digit mobiles, so `localDigitLengths` is `[7, 9]` and an 8-digit number is rejected. These cover every kind of number libphonenumber lists, including toll-free and premium-rate lines, so a real number is never rejected for its length
+
+To refresh them, pin the libphonenumber release in `internal/cmd/gencountries/main.go` and run this from the repository root. It also rewrites `testdata/libphonenumber_examples.json`, libphonenumber’s example landline and mobile number for each of those African countries, which the tests check:
+
+```bash
+go run ./internal/cmd/gencountries
+```
+
+Countries libphonenumber doesn’t list keep their current values, and the command prints their codes.
 
 ## API Reference
 
@@ -119,11 +162,18 @@ The country data used in this package was sourced from [Kaggle - Country 2ISO3UN
 
 ```go
 type Country struct {
-    Name        string
-    A2          string    // ISO Alpha-2 code (e.g., "US")
-    A3          string    // ISO Alpha-3 code (e.g., "USA") 
-    NumCode     int       // ISO Numeric code (e.g., 840)
-    DialingCode string    // International dialing code (e.g., "1")
+    Name                string
+    A2                  string // ISO Alpha-2 code (e.g., "US")
+    A3                  string // ISO Alpha-3 code (e.g., "USA")
+    NumCode             int    // ISO Numeric code (e.g., 840)
+    DialingCode         string // International dialing code (e.g., "1"), or several separated by commas
+    InternationalPrefix string // Pattern for what callers dial before a foreign number (e.g., "00", "011")
+    NationalPrefix      string // What callers dial before a number inside the country (e.g., "0"), or "" for none
+    NumberPattern       string // Pattern for a valid number without the dialing code
+    MainCountryForCode  bool   // True for the country returned when several share a dialing code
+    MinLocalDigits      int    // Fewest digits after the dialing code
+    MaxLocalDigits      int    // Most digits after the dialing code
+    LocalDigitLengths   []int  // Every allowed digit count after the dialing code, when known (e.g., [7, 9])
 }
 
 type Normalizer struct {
@@ -141,27 +191,34 @@ When a number doesn't have an international prefix, Sanja uses the default count
 
 ```go
 // With US as default
-norm := sanja.NewNormalizer("US")
-norm.Normalize("4151234567") // → "+14151234567"
+usNorm, _ := sanja.NewNormalizer("US")
+usNorm.Normalize("4151234567") // → "+14151234567"
 
 // With Malawi as default  
-norm := sanja.NewNormalizer("MW")
-norm.Normalize("886392814") // → "+265886392814"
+mwNorm, _ := sanja.NewNormalizer("MW")
+mwNorm.Normalize("886392814") // → "+265886392814"
+
+// The default country's prefix for calling abroad works like "+"
+mwNorm.Normalize("00447911123456") // → "+447911123456" (Malawi dials 00)
+usNorm.Normalize("011265886392814") // → "+265886392814" (the US dials 011)
 ```
 
 ## Error Handling
 
 ```go
-norm := sanja.NewNormalizer("US")
+norm, _ := sanja.NewNormalizer("US")
 
 // Empty string
 _, err := norm.Normalize("")
 // err: "invalid phone number"
 
-// Invalid default country
-norm := sanja.NewNormalizer("INVALID")
-_, err := norm.Normalize("123456789")
-// err: "no default country set"
+// A plus sign anywhere but the start
+_, err = norm.Normalize("+1+2025550123")
+// err: "invalid phone number"
+
+// Unknown default country
+_, err = sanja.NewNormalizer("XX")
+// err: "invalid or unknown country: XX"
 ```
 ## Testing
 for testing i used this package by stretchr:  [Assert](https://www.github.com/stretchr/testify/assert)

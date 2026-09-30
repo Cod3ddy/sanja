@@ -3,15 +3,20 @@ package sanja
 import "strings"
 
 // cleanPhone removes all non-digit characters except +
-func cleanPhone(phone string) string {
+func cleanPhone(phone string) (string, error) {
 	var result strings.Builder
 	for _, r := range phone {
-		if (r >= '0' && r <= '9') || r == '+' {
+		switch {
+		case r >= '0' && r <= '9':
 			result.WriteRune(r)
+		case r == '+' && result.Len() == 0:
+			result.WriteRune(r)
+		case r == '+':
+			return "", ErrInvalidPhoneNumber
 		}
 	}
 
-	return result.String()
+	return result.String(), nil
 }
 
 // splitDialingCodes splits dialing code string into individual codes
